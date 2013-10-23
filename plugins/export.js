@@ -6,8 +6,5 @@ module.exports = function(jsdoc) {
                 this.name = name;
                 this.content = content;
             }
-        },
-        {
-            type : 'export'
         }));
 };

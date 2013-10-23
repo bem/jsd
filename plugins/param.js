@@ -27,19 +27,18 @@ module.exports = function(jsdoc) {
         })
         .registerNode('param', INHERIT({
             __constructor : function(name, description, jsType, isOptional, def) {
+                this.type = 'param';
                 this.name = name;
                 this.description = description;
                 this.jsType = jsType;
                 this.isOptional = isOptional;
                 this.default = def;
             }
-        }, {
-            type : 'param'
         }))
         .registerBuilder(
-            function(tag) {
+            function(tag, jsdocNode) {
                 tag.type === 'param' &&
-                    this.jsdocNode.addParam(
+                    (this.jsdocNode.params || (this.jsdocNode.params = [])).push(
                         jsdoc.createNode(
                             'param',
                             tag.name,

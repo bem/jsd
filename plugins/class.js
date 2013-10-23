@@ -1,29 +1,31 @@
 module.exports = function(jsdoc) {
-    var INHERIT = jsdoc.require('inherit');
-
     jsdoc
         .registerTag('class', function(comment) {
             return { name : comment };
         })
-        .registerNode('class', INHERIT({
-            __constructor : function(name) {
-                this.name = name;
-                this.description = '';
-                this.static = jsdoc.createNode('object');
-                this.proto = jsdoc.createNode('object');
-                this.augment = '';
-                this.mixes = [];
-                this.mixin = false;
-            }
-        }, {
-            type : 'class'
-        }))
+        .registerTag('lends', function(comment) {
+            return { to : comment };
+        })
         .registerBuilder(
-            function() {
-                this.classes = {};
-            },
             function(tag) {
-                tag.type === 'class' &&
-                    (this.jsdocNode = this.classes[tag.name] = jsdoc.createNode('class', tag.name));
+                switch(tag.type) {
+                    case 'class':
+                        this.jsdocNode = (this.classes || (this.classes = {}))[tag.name] = {
+                            type : 'class',
+                            name : tag.name,
+                            'static' : {},
+                            proto : {}
+                        };
+                    break;
+
+                    case 'lends':
+                        var matches = tag.to.split('.');
+                        this.jsdocNode = this.classes
+                            [matches[0]]
+                            [matches[matches.length - 1] === 'prototype'?
+                                'proto' :
+                                'static'];
+                    break;
+                }
             });
 };

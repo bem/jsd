@@ -1,30 +1,25 @@
 module.exports = function(jsdoc) {
-    var INHERIT = jsdoc.require('inherit');
-
     jsdoc
         .registerTag('module', function(comment) {
             return { name : comment };
         })
-        .registerNode('module', INHERIT({
-            __constructor : function(name) {
-                this.name = name;
-                this.description = '';
-                this.exports = [];
-            },
+        .registerBuilder(function(tag, jsdocNode) {
+            switch(tag.type) {
+                case 'module':
+                    (jsdocNode.modules || (jsdocNode.modules = [])).push(
+                        this.jsdocNode =
+                            (this.modules || (this.modules = {}))[tag.name] =
+                                { type : 'module', name : tag.name });
+                break;
 
-            addExport : function(node) {
-                this.exports.push(node);
+                case 'alias':
+                    var matches = tag.to.split(':');
+                    if(matches.length === 2) {
+                        var module = this.modules[matches[0]];
+                        (module.exports || (module.exports = [])).push(
+                            { type : 'export', name : matches[1], content : this.jsdocNode });
+                    }
+                break;
             }
-        }, {
-            type : 'module'
-        }))
-        .registerBuilder(
-            function() {
-                this.modules = {};
-            },
-            function(tag, jsdocNode) {
-                tag.type === 'module' &&
-                    jsdocNode.addModule(
-                        this.jsdocNode = this.modules[tag.name] = jsdoc.createNode('module', tag.name));
-            });
+        });
 };

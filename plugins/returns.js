@@ -18,9 +18,6 @@ module.exports = function(jsdoc) {
             type : 'returns'
         }))
         .registerBuilder(
-            function() {
-                this.isFunction = false;
-            },
             function(tag) {
                 tag.type === 'returns' &&
                     (this.jsdocNode.returns = jsdoc.createNode('returns', tag.description, tag.jsType));

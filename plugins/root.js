@@ -3,13 +3,7 @@ module.exports = function(jsdoc) {
 
     jsdoc.registerNode('root', INHERIT({
         __constructor : function() {
-            this.modules = [];
-        },
-
-        addModule : function(module) {
-            this.modules.push(module);
+            this.type = 'root';
         }
-    }, {
-        type : 'root'
     }));
 };
