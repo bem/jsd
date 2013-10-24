@@ -1,6 +1,4 @@
 module.exports = function(jsdoc) {
-    var INHERIT = jsdoc.require('inherit');
-
     jsdoc
         .registerTag('param', function(comment) {
             var match = comment.match(/^(?:{([^}]+)}\s+)?(\S+)\s*(.*?)\s*$/),
@@ -25,26 +23,17 @@ module.exports = function(jsdoc) {
                 'default' : defaultVal
             };
         })
-        .registerNode('param', INHERIT({
-            __constructor : function(name, description, jsType, isOptional, def) {
-                this.type = 'param';
-                this.name = name;
-                this.description = description;
-                this.jsType = jsType;
-                this.isOptional = isOptional;
-                this.default = def;
-            }
-        }))
         .registerBuilder(
             function(tag, jsdocNode) {
                 tag.type === 'param' &&
-                    (this.jsdocNode.params || (this.jsdocNode.params = [])).push(
-                        jsdoc.createNode(
-                            'param',
-                            tag.name,
-                            tag.description,
-                            tag.jsType,
-                            tag.isOptional,
-                            tag.default));
+                    (jsdocNode.params || (jsdocNode.params = [])).push(
+                        {
+                            type : 'param',
+                            name : tag.name,
+                            description : tag.description,
+                            jsType : tag.jsType,
+                            isOptional : tag.isOptional,
+                            'default' : tag.default
+                        });
             });
 };

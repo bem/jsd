@@ -3,7 +3,7 @@ module.exports = function(jsdoc) {
         .registerTag('description', function(comment) {
             return { content : comment };
         })
-        .registerBuilder(function(tag) {
-            tag.type === 'description' && (this.jsdocNode.description = tag.content);
+        .registerBuilder(function(tag, jsdocNode) {
+            tag.type === 'description' && (jsdocNode.description = tag.content);
         });
 };

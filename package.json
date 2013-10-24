@@ -2,7 +2,6 @@
     "name" : "jsdoc",
     "version" : "0.0.1",
     "dependencies": {
-        "inherit" : "2.1.0",
         "esprima" : "1.0.4"
     },
     "devDependencies" : {

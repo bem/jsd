@@ -3,7 +3,7 @@ module.exports = function(jsdoc) {
         .registerTag('constructor', function() {
             return {};
         })
-        .registerBuilder(function(tag) {
-            tag.type === 'constructor' && (this.jsdocNode.isConstructor = true);
+        .registerBuilder(function(tag, jsdocNode) {
+            tag.type === 'constructor' && (jsdocNode.isConstructor = true);
         });
 };
