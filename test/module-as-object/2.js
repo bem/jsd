@@ -14,7 +14,7 @@ provide(/** @exports my-module */{
     Export1 : Export1,
 
     /**
-     * @param p1
+     * Method export2
      */
     export2 : function(p1) {}
 });

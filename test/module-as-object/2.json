@@ -16,14 +16,7 @@
                     {
                         "type": "function",
                         "name": "export2",
-                        "params": [
-                            {
-                                "type": "param",
-                                "name": "p1",
-                                "description": "",
-                                "isOptional": false
-                            }
-                        ]
+                        "description": "Method export2"
                     }
                 ]
             }
