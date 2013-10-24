@@ -17,11 +17,15 @@ module.exports = function(jsdoc) {
                 case 'exports':
                     var module = this.modules[tag.name];
                     if(astNode.type === 'FunctionExpression') {
-                        return module;
+                        return module.exports = jsdocNode;
                     }
-                    else {
-                        return module.exports || (module.exports = { type : 'object', fields : [] });
+                    else if(astNode.type === 'ObjectExpression') {
+                        return (module.exports || (module.exports = {
+                            type : 'object',
+                            fields : []
+                        }));
                     }
+                break;
 
                 case 'alias':
                     var matches = tag.to.split(':');
