@@ -1,0 +1,32 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "object",
+                "fields": [
+                    {
+                        "type": "class",
+                        "name": "Export1",
+                        "static": {},
+                        "proto": {}
+                    },
+                    {
+                        "type": "function",
+                        "name": "export2",
+                        "params": [
+                            {
+                                "type": "param",
+                                "name": "p1",
+                                "description": "",
+                                "isOptional": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

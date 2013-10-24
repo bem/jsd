@@ -5,6 +5,11 @@
         "esprima" : "1.0.4"
     },
     "devDependencies" : {
-        "eyes" : "0.1.8"
+        "eyes" : "0.1.8",
+        "mocha" : "1.13.0",
+        "chai" : "1.8.1"
+    },
+    "scripts" : {
+        "test" : "./node_modules/.bin/mocha -u bdd -R spec"
     }
 }
