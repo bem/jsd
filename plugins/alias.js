@@ -1,5 +1,5 @@
 module.exports = function(jsdoc) {
-    jsdoc.registerTag('alias', function(comment) {
+    jsdoc.registerTagParser('alias', function(comment) {
         return { to : comment };
     });
 };

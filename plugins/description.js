@@ -1,9 +1,9 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerTag('description', function(comment) {
+        .registerTagParser('description', function(comment) {
             return { content : comment };
         })
-        .registerBuilder(function(tag, jsdocNode) {
-            tag.type === 'description' && (jsdocNode.description = tag.content);
+        .registerTagBuilder('description', function(tag, jsdocNode) {
+            jsdocNode.description = tag.content;
         });
 };

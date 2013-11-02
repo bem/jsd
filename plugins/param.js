@@ -1,6 +1,6 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerTag('param', function(comment) {
+        .registerTagParser('param', function(comment) {
             var match = comment.match(/^(?:{([^}]+)}\s+)?(\S+)\s*(.*?)\s*$/),
                 name = match[2],
                 isOptional = name[0] === '[',
@@ -23,17 +23,15 @@ module.exports = function(jsdoc) {
                 'default' : defaultVal
             };
         })
-        .registerBuilder(
-            function(tag, jsdocNode) {
-                tag.type === 'param' &&
-                    (jsdocNode.params || (jsdocNode.params = [])).push(
-                        {
-                            type : 'param',
-                            name : tag.name,
-                            description : tag.description,
-                            jsType : tag.jsType,
-                            isOptional : tag.isOptional,
-                            'default' : tag.default
-                        });
-            });
+        .registerTagBuilder('param', function(tag, jsdocNode) {
+            (jsdocNode.params || (jsdocNode.params = [])).push(
+                {
+                    type : 'param',
+                    name : tag.name,
+                    description : tag.description,
+                    jsType : tag.jsType,
+                    isOptional : tag.isOptional,
+                    'default' : tag.default
+                });
+        });
 };
