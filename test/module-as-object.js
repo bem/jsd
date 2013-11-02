@@ -7,6 +7,6 @@ U.testPlugins(
         'class',
         'alias',
         'function',
-        'description',
+        'description'
     ]
 );

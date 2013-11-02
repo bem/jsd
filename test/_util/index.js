@@ -1,12 +1,12 @@
 require('chai').should();
 
-var JSDOC = require('../../lib/jsdoc'),
+var jsdoc = new (require('../../lib/jsdoc')),
     FS = require('fs'),
     PATH = require('path');
 
 exports.testPlugins = function(testFile, plugins) {
     plugins.forEach(function(plugin) {
-        JSDOC.registerPlugin(PATH.join(__dirname, '..', '..', 'plugins', plugin));
+        jsdoc.registerPlugin(PATH.join(__dirname, '..', '..', 'plugins', plugin));
     });
 
     var baseName = PATH.basename(testFile, '.js');
@@ -21,7 +21,7 @@ exports.testPlugins = function(testFile, plugins) {
 
                 it(jsFileName + ' should be parsed as expected in ' + jsonFileName, function() {
                     // NOTE: JSON.parse(JSON.stringify(...)) because of Chai.js bug
-                    var res = JSON.stringify(JSDOC(FS.readFileSync(jsFileName)), null, 4);
+                    var res = JSON.stringify(jsdoc.doIt(FS.readFileSync(jsFileName)), null, 4);
                     FS.writeFileSync(resFileName, res);
                     JSON.parse(res).should.be.eql(
                         JSON.parse(FS.readFileSync(jsonFileName)),
