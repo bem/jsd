@@ -31,6 +31,7 @@ module.exports = function(jsdoc) {
                     var matches = tag.to.split(':');
                     if(matches.length === 2) {
                         var module = this.modules[matches[0]];
+                        jsdocNode.name = matches[1];
                         (module.exports || (module.exports = {
                             type : 'object',
                             fields : []
