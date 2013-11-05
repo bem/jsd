@@ -1,10 +1,11 @@
 require('chai').should();
 
-var jsdoc = new (require('../../lib/jsdoc')),
+var JSDOC = require('../../lib/jsdoc'),
     FS = require('fs'),
     PATH = require('path');
 
 exports.testPlugins = function(testFile, plugins) {
+    var jsdoc = new JSDOC();
     plugins.forEach(function(plugin) {
         jsdoc.registerPlugin(PATH.join(__dirname, '..', '..', 'plugins', plugin));
     });
