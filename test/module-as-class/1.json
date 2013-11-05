@@ -1,0 +1,36 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "class",
+                "name": "ModuleClass",
+                "static": {
+                    "fields": [
+                        {
+                            "type": "function",
+                            "name": "staticMethod",
+                            "description": "Description of static method"
+                        }
+                    ]
+                },
+                "proto": {
+                    "fields": [
+                        {
+                            "type": "function",
+                            "name": "method1",
+                            "description": "Description of method1"
+                        },
+                        {
+                            "type": "function",
+                            "name": "method2",
+                            "description": "Description of method2"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

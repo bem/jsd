@@ -23,11 +23,18 @@ module.exports = function(jsdoc) {
                     fields : []
                 }));
             }
+            else {
+                return module.exports = {};
+            }
         })
         .registerTagBuilder('alias', function(tag, jsdocNode) {
-            var matches = tag.to.split(':');
-            if(matches.length === 2) {
-                var module = this.modules[matches[0]];
+            var matches = tag.to.split(':'),
+                module = this.modules[matches[0]];
+
+            if(matches.length === 1) {
+                module.exports = jsdocNode;
+            }
+            else {
                 jsdocNode.name = matches[1];
                 (module.exports || (module.exports = {
                     type : 'object',
