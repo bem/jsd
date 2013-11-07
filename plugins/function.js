@@ -1,5 +1,5 @@
 module.exports = function(jsdoc) {
-    jsdoc.registerTagsBuilder(function(tags, jsdocNode, astNode) {
+    jsdoc.registerTagsStartBuilder(function(tags, jsdocNode, astNode) {
         switch(astNode.type) {
             case 'FunctionExpression':
             case 'FunctionDeclaration':
