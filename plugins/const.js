@@ -3,7 +3,7 @@ module.exports = function(jsdoc) {
         .registerTagParser('const', function() {
             return {};
         })
-        .registerTagBuilder('const', function(tag, jsdocNode) {
-            jsdocNode.isConst = true;
+        .registerTagsEndBuilder(function(tags, jsdocNode) {
+            tags.hasTagByType('const') && (jsdocNode.isConst = true);
         });
 };
