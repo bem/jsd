@@ -1,0 +1,20 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "type",
+                "jsType": "Object",
+                "fields": [
+                    {
+                        "type": "function",
+                        "name": "export",
+                        "description": "Method export"
+                    }
+                ]
+            }
+        }
+    ]
+}
