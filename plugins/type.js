@@ -22,19 +22,14 @@ module.exports = function(jsdoc) {
                 case 'FunctionExpression':
                 case 'FunctionDeclaration':
                     return { type : 'type', jsType : 'Function' };
-                break;
 
                 case 'VariableDeclaration':
+                    return process(tags, jsdocNode, astNode.declarations[0], isChanged);
+
                 case 'VariableDeclarator':
-                    var firstDecl = astNode.type === 'VariableDeclaration'?
-                            astNode.declarations[0].init :
-                            astNode.init;
-
-                    if(!firstDecl) {
-                        return;
+                    if(astNode.init) {
+                        return process(tags, jsdocNode, astNode.init, isChanged);
                     }
-
-                    return process(tags, jsdocNode, firstDecl, isChanged);
                 break;
 
                 case 'Property':
