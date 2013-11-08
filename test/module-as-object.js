@@ -3,9 +3,10 @@ var U = require('./_util');
 U.testPlugins(
     __filename,
     [
-        'type',
         'class',
         'module',
+        'type',
+        'exports',
         'alias',
         'description',
         'constructor',

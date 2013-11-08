@@ -6,7 +6,7 @@ modules.define('my-module', function(provide) {
 
 /**
  * @class ModuleClass
- * @alias my-module
+ * @exports my-module
  */
 var ModuleClass = inherit(/** @lends ModuleClass.prototype */{
     /**
