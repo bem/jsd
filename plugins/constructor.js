@@ -1,9 +1,9 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerTagParser('constructor', function() {
+        .registerParser('constructor', function() {
             return {};
         })
-        .registerTagBuilder('constructor', function(tag, jsdocNode) {
+        .registerBuilder('constructor', function(tag, jsdocNode) {
             jsdocNode.isConstructor = true;
         });
 };

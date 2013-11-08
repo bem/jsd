@@ -6,19 +6,19 @@
             "name": "my-module",
             "exports": {
                 "type": "type",
-                "jsType" : "Object",
-                "fields": [
-                    {
-                        "type": "function",
-                        "name": "method1",
+                "jsType": "Object",
+                "props": {
+                    "method1": {
+                        "type": "type",
+                        "jsType": "Function",
                         "description": "Description of method1"
                     },
-                    {
-                        "type": "function",
-                        "name": "method2",
+                    "method2": {
+                        "type": "type",
+                        "jsType": "Function",
                         "description": "Description of method2"
                     }
-                ]
+                }
             }
         }
     ]

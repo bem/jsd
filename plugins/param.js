@@ -1,6 +1,6 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerTagParser('param', function(comment) {
+        .registerParser('param', function(comment) {
             var match = comment.match(/^(?:{([^}]+)}\s+)?(\S+)\s*(.*?)\s*$/),
                 name = match[2],
                 isOptional = name[0] === '[',
@@ -23,7 +23,7 @@ module.exports = function(jsdoc) {
                 'default' : defaultVal
             };
         })
-        .registerTagBuilder('param', function(tag, jsdocNode) {
+        .registerBuilder('param', function(tag, jsdocNode) {
             (jsdocNode.params || (jsdocNode.params = [])).push(
                 {
                     type : 'param',

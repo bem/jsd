@@ -4,12 +4,12 @@ U.testPlugins(
     __filename,
     [
         'type',
-        'module',
         'class',
+        'module',
         'alias',
-        'function',
         'description',
         'constructor',
+        'const',
         'param',
         'returns'
     ]

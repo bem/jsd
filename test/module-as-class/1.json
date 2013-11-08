@@ -8,27 +8,31 @@
                 "type": "class",
                 "name": "ModuleClass",
                 "static": {
-                    "fields": [
-                        {
-                            "type": "function",
-                            "name": "staticMethod",
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {
+                        "staticMethod": {
+                            "type": "type",
+                            "jsType": "Function",
                             "description": "Description of static method"
                         }
-                    ]
+                    }
                 },
                 "proto": {
-                    "fields": [
-                        {
-                            "type": "function",
-                            "name": "method1",
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {
+                        "method1": {
+                            "type": "type",
+                            "jsType": "Function",
                             "description": "Description of method1"
                         },
-                        {
-                            "type": "function",
-                            "name": "method2",
+                        "method2": {
+                            "type": "type",
+                            "jsType": "Function",
                             "description": "Description of method2"
                         }
-                    ]
+                    }
                 }
             }
         }

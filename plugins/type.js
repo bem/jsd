@@ -1,56 +1,72 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerTagParser('type', function(comment) {
+        .registerParser('type', function(comment) {
             return { jsType : comment };
         })
-        .registerTagsStartBuilder(function(tags, jsdocNode, astNode) {
-            this._startTagsJsdocNode = jsdocNode;
-
-            if(tags.hasTagByType('type')) {
-                switch(astNode.type) {
-                    case 'Property':
-                        return buildTypeNodeInProperty(jsdocNode, astNode);
-                }
-                return { type : 'type' };
+        .registerBuilder('type', function(tag, jsdocNode, astNode) {
+            switch(astNode.type) {
+                case 'Property':
+                    return buildTypeNodeInProperty(tag.jsType, jsdocNode, astNode);
             }
+
+            var res = { type : 'type', jsType : tag.jsType };
+            tag.jsType === 'Object' && (res.props = {});
+            return res;
         })
-        .registerTagsEndBuilder(function(tags, jsdocNode, astNode) {
-            var startTagsJsdocNode = this._startTagsJsdocNode;
-            delete this._startTagsJsdocNode;
+        .registerBuilder(function process(tags, jsdocNode, astNode, isChanged) {
+            if(isChanged) {
+                return;
+            }
 
-            if(startTagsJsdocNode === jsdocNode) {
-                switch(astNode.type) {
-                    case 'Property':
-                        if(astNode.value.type === 'Literal') {
-                            var typeNode = buildTypeNodeInProperty(jsdocNode, astNode),
-                                value = astNode.value.value;
+            switch(astNode.type) {
+                case 'FunctionExpression':
+                case 'FunctionDeclaration':
+                    return { type : 'type', jsType : 'Function' };
+                break;
 
-                            typeNode.jsType = getLiteralJsType(value);
+                case 'VariableDeclaration':
+                case 'VariableDeclarator':
+                    var firstDecl = astNode.type === 'VariableDeclaration'?
+                            astNode.declarations[0].init :
+                            astNode.init;
+
+                    if(!firstDecl) {
+                        return;
+                    }
+
+                    return process(tags, jsdocNode, firstDecl, isChanged);
+                break;
+
+                case 'Property':
+                    switch(astNode.value.type) {
+                        case 'FunctionExpression':
+                            return buildTypeNodeInProperty(jsdocNode, astNode, 'Function');
+
+                        case 'Literal':
+                            var value = astNode.value.value,
+                                typeNode = buildTypeNodeInProperty(getLiteralJsType(value), jsdocNode, astNode);
+
                             typeNode.jsValue = value;
                             return typeNode;
-                        }
-                    break;
+                    }
+                break;
 
-                    case 'Literal':
-                        return {
-                            type : 'type',
-                            jsType : getLiteralJsType(astNode.value),
-                            jsValue : astNode.value
-                        };
+                case 'Literal':
+                    return {
+                        type : 'type',
+                        jsType : getLiteralJsType(astNode.value),
+                        jsValue : astNode.value
+                    };
 
-                    case 'ObjectExpression':
-                        return { type : 'type', jsType : 'Object' };
-                }
+                case 'ObjectExpression':
+                    return { type : 'type', jsType : 'Object', props : {} };
             }
-        })
-        .registerTagBuilder('type', function(tag, jsdocNode) {
-            jsdocNode.jsType = tag.jsType;
         });
 };
 
-function buildTypeNodeInProperty(jsdocNode, astNode) {
-    var res = { type : 'type', name : astNode.key.value || astNode.key.name };
-    (jsdocNode.fields || (jsdocNode.fields = [])).push(res);
+function buildTypeNodeInProperty(jsdocNode, astNode, jsType) {
+    var res = { type : 'type', jsType : jsType };
+    jsdocNode.props[astNode.key.value || astNode.key.name] = res;
     return res;
 }
 

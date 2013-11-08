@@ -7,13 +7,13 @@
             "exports": {
                 "type": "type",
                 "jsType": "Object",
-                "fields": [
-                    {
-                        "type": "function",
-                        "name": "export",
+                "props": {
+                    "export": {
+                        "type": "type",
+                        "jsType": "Function",
                         "description": "Method export"
                     }
-                ]
+                }
             }
         }
     ]

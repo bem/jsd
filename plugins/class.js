@@ -1,20 +1,20 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerTagParser('class', function(comment) {
+        .registerParser('class', function(comment) {
             return { name : comment };
         })
-        .registerTagParser('lends', function(comment) {
+        .registerParser('lends', function(comment) {
             return { to : comment };
         })
-        .registerTagBuilder('class', function(tag) {
+        .registerBuilder('class', function(tag) {
             return (this.classes || (this.classes = {}))[tag.name] = {
                 type : 'class',
                 name : tag.name,
-                'static' : {},
-                proto : {}
+                'static' : { type : 'type', jsType : 'Object', props : {} },
+                proto : { type : 'type', jsType : 'Object', props : {} }
             };
         })
-        .registerTagBuilder('lends', function(tag) {
+        .registerBuilder('lends', function(tag) {
             var matches = tag.to.split('.');
             return this.classes
                 [matches[0]]
