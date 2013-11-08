@@ -1,0 +1,50 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "functions__throttle",
+            "exports": {
+                "type": "type",
+                "jsType": "Function",
+                "description": "Throttle given function",
+                "params": [
+                    {
+                        "type": "param",
+                        "name": "fn",
+                        "description": "function to throttle",
+                        "jsType": "Function",
+                        "isOptional": false
+                    },
+                    {
+                        "type": "param",
+                        "name": "timeout",
+                        "description": "throttle interval",
+                        "jsType": "Number",
+                        "isOptional": false
+                    },
+                    {
+                        "type": "param",
+                        "name": "invokeAsap",
+                        "description": "invoke before first interval",
+                        "jsType": "Boolean",
+                        "isOptional": true,
+                        "default": "true"
+                    },
+                    {
+                        "type": "param",
+                        "name": "ctx",
+                        "description": "context of function invocation",
+                        "jsType": "Object",
+                        "isOptional": true
+                    }
+                ],
+                "returns": {
+                    "type": "returns",
+                    "description": "throttled function",
+                    "jsType": "Function"
+                }
+            }
+        }
+    ]
+}
