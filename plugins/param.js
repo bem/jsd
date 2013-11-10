@@ -24,6 +24,10 @@ module.exports = function(jsdoc) {
             };
         })
         .registerBuilder('param', function(tag, jsdocNode) {
+            if(jsdocNode.jsType !== 'function') {
+                throw Error('@param without function');
+            }
+
             (jsdocNode.params || (jsdocNode.params = [])).push(
                 {
                     type : 'param',
