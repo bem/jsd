@@ -3,11 +3,11 @@ module.exports = function(jsdoc) {
         .registerParser('exports', function(comment) {
             return { name : comment };
         })
-        .registerBuilder('exports', function(tag, jsdocNode) {
+        .registerBuilder('exports', function(tag, curJsdocNode) {
             var module = this.modules[tag.name];
-            return module.exports || (module.exports = jsdocNode);
+            return module.exports || (module.exports = curJsdocNode);
         })
-        .registerBuilder('alias', function(tag, jsdocNode) {
+        .registerBuilder('alias', function(tag, curJsdocNode) {
             var matches = tag.to.split(':');
 
             if(matches[1]) {
@@ -16,7 +16,7 @@ module.exports = function(jsdoc) {
                     type : 'type',
                     jsType : 'Object',
                     props : {}
-                })).props[matches[1]] = jsdocNode;
+                })).props[matches[1]] = curJsdocNode;
             }
         });
 };

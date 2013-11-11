@@ -7,8 +7,8 @@ module.exports = function(jsdoc) {
                 description : match[2]
             };
         })
-        .registerBuilder('returns', function(tag, jsdocNode) {
-            jsdocNode.returns = {
+        .registerBuilder('returns', function(tag, curJsdocNode) {
+            curJsdocNode.returns = {
                 type : 'returns',
                 description : tag.description,
                 jsType : tag.jsType

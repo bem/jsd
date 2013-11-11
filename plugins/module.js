@@ -3,9 +3,9 @@ module.exports = function(jsdoc) {
         .registerParser('module', function(comment) {
             return { name : comment };
         })
-        .registerBuilder('module', function(tag, jsdocNode) {
+        .registerBuilder('module', function(tag, curJsdocNode) {
             var moduleNode = { type : 'module', name : tag.name };
-            (jsdocNode.modules || (jsdocNode.modules = [])).push(
+            (curJsdocNode.modules || (curJsdocNode.modules = [])).push(
                 (this.modules || (this.modules = {}))[tag.name] = moduleNode);
             return moduleNode;
         });

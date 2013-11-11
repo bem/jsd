@@ -3,7 +3,7 @@ module.exports = function(jsdoc) {
         .registerParser('constructor', function() {
             return {};
         })
-        .registerBuilder('constructor', function(tag, jsdocNode) {
-            jsdocNode.isConstructor = true;
+        .registerBuilder('constructor', function(tag, curJsdocNode) {
+            curJsdocNode.isConstructor = true;
         });
 };

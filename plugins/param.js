@@ -23,12 +23,12 @@ module.exports = function(jsdoc) {
                 'default' : defaultVal
             };
         })
-        .registerBuilder('param', function(tag, jsdocNode) {
-            if(jsdocNode.jsType !== 'function') {
+        .registerBuilder('param', function(tag, curJsdocNode) {
+            if(curJsdocNode.jsType !== 'Function') {
                 throw Error('@param without function');
             }
 
-            (jsdocNode.params || (jsdocNode.params = [])).push(
+            (curJsdocNode.params || (curJsdocNode.params = [])).push(
                 {
                     type : 'param',
                     name : tag.name,

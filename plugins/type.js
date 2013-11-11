@@ -3,14 +3,14 @@ module.exports = function(jsdoc) {
         .registerParser('type', function(comment) {
             return { jsType : comment };
         })
-        .registerBuilder('type', function(tag, jsdocNode, astNode) {
+        .registerBuilder('type', function(tag, jsdocNode, _, astNode) {
             var res = buildTypeNode(jsdocNode, astNode);
             res.jsType === '*' && (res.jsType = tag.jsType);
             return res;
         })
-        .registerBuilder(function(tags, jsdocNode, astNode, isChanged) {
-            if(!isChanged) {
-                return buildTypeNode(jsdocNode, astNode);
+        .registerBuilder(function(tags, curJsdocNode, parentJsdocNode, astNode) {
+            if(curJsdocNode === parentJsdocNode) {
+                return buildTypeNode(curJsdocNode, astNode);
             }
         });
 };
