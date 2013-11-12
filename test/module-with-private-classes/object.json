@@ -1,0 +1,81 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "type",
+                "jsType": "Object",
+                "props": {
+                    "method1": {
+                        "type": "type",
+                        "jsType": "Function",
+                        "description": "Method1",
+                        "params": [
+                            {
+                                "type": "param",
+                                "name": "a",
+                                "description": "",
+                                "jsType": "A",
+                                "isOptional": false
+                            }
+                        ]
+                    },
+                    "method2": {
+                        "type": "type",
+                        "jsType": "Function",
+                        "description": "Method2",
+                        "returns": {
+                            "type": "returns",
+                            "description": "",
+                            "jsType": "B"
+                        }
+                    }
+                }
+            },
+            "classes": {
+                "A": {
+                    "type": "class",
+                    "name": "A",
+                    "static": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
+                    },
+                    "proto": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {
+                            "methodA": {
+                                "type": "type",
+                                "jsType": "Function",
+                                "description": "MethodA"
+                            }
+                        }
+                    }
+                },
+                "B": {
+                    "type": "class",
+                    "name": "B",
+                    "static": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
+                    },
+                    "proto": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {
+                            "methodB": {
+                                "type": "type",
+                                "jsType": "Function",
+                                "description": "MethodB"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

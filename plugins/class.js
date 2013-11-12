@@ -7,7 +7,11 @@ module.exports = function(jsdoc) {
             return { to : comment };
         })
         .registerBuilder('class', function(tag) {
-            return (this.classes || (this.classes = {}))[tag.name] = {
+            var classes = this.classes || (this.classes = {});
+
+            if(classes[tag.name]) throw Error('class ' + tag.name + ' is already defined');
+
+            return classes[tag.name] = {
                 type : 'class',
                 name : tag.name,
                 'static' : { type : 'type', jsType : 'Object', props : {} },

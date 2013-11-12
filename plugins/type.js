@@ -5,7 +5,7 @@ module.exports = function(jsdoc) {
         })
         .registerBuilder('type', function(tag, jsdocNode, _, astNode) {
             var res = buildTypeNode(jsdocNode, astNode);
-            res.jsType === '*' && (res.jsType = tag.jsType);
+            res.jsType === '*' && tag.jsType !== '*' && (res.jsType = tag.jsType);
             return res;
         })
         .registerBuilder(function(tags, curJsdocNode, parentJsdocNode, astNode) {

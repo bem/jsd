@@ -1,0 +1,13 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "type",
+                "jsType": "C"
+            }
+        }
+    ]
+}
