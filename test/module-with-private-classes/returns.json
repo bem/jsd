@@ -1,0 +1,40 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "type",
+                "jsType": "Function",
+                "returns": {
+                    "type": "returns",
+                    "description": "",
+                    "jsType": "A"
+                }
+            },
+            "classes": {
+                "A": {
+                    "type": "class",
+                    "name": "A",
+                    "static": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
+                    },
+                    "proto": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {
+                            "method": {
+                                "type": "type",
+                                "jsType": "Function",
+                                "description": "Method"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
