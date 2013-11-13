@@ -47,6 +47,10 @@
                                 }
                             }
                         }
+                    },
+                    "augments": {
+                        "type": "type",
+                        "jsType": "events:Emitter"
                     }
                 }
             }

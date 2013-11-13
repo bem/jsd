@@ -8,6 +8,7 @@ var IDLE_TIMEOUT = 3000,
     USER_EVENTS = 'mousemove keydown click',
     /**
      * @class Idle
+     * @augments events:Emitter
      */
     Idle = inherit(events.Emitter, /** @lends Idle.prototype */{
         /**
