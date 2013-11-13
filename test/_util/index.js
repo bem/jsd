@@ -19,6 +19,7 @@ exports.testPlugins = function(testFile, plugins) {
             'constructor',
             'augments',
             'const',
+            'deprecated',
             'param',
             'returns'
         ]
