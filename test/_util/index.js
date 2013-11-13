@@ -7,7 +7,6 @@ var JSDOC = require('../../lib/jsdoc'),
 
 exports.testPlugins = function(testFile, plugins) {
     var jsdoc = new JSDOC();
-
     (
         plugins ||
         [
