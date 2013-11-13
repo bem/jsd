@@ -1,6 +1,10 @@
 {
     "name" : "jsdoc",
     "version" : "0.0.1",
+    "contributors" : [
+        { "name" : "Sergey Berezhnoy", "email" : "veged@ya.ru" },
+        { "name" : "Dmitry Filatov", "email" : "dfilatov@yandex-team.ru" }
+    ],
     "dependencies": {
         "esprima" : "1.0.4",
         "inherit" : "2.1.0"
