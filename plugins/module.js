@@ -53,6 +53,7 @@ function iterateAndSaveClassesFactory(ctx, moduleNode) {
         else if(type === 'class') {
             iterateAndSaveClasses(jsdocNode.proto);
             iterateAndSaveClasses(jsdocNode.static);
+            iterateAndSaveClasses(jsdocNode.augments);
         }
     }
 }
