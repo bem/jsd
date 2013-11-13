@@ -7,25 +7,23 @@ module.exports = function(jsdoc) {
             return { to : comment };
         })
         .registerBuilder('class', function(tag) {
-            var classes = this.classes || (this.classes = {});
-
-            if(classes[tag.name]) throw Error('class ' + tag.name + ' is already defined');
-
-            return classes[tag.name] = {
-                type : 'class',
-                name : tag.name,
-                'static' : { type : 'type', jsType : 'Object', props : {} },
-                proto : { type : 'type', jsType : 'Object', props : {} }
-            };
+            return addClassNode(this, tag.name);
         })
         .registerBuilder('lends', function(tag) {
             var matches = tag.to.split('.');
-            return this.classes
-                [matches[0]]
+            return addClassNode(this, matches[0])
                 [matches[matches.length - 1] === 'prototype'?
                     'proto' :
                     'static'];
         });
 };
 
-
+function addClassNode(ctx, name) {
+    var classes = ctx.classes || (ctx.classes = {});
+    return classes[name] || (classes[name] = {
+        type : 'class',
+        name : name,
+        'static' : { type : 'type', jsType : 'Object', props : {} },
+        proto : { type : 'type', jsType : 'Object', props : {} }
+    });
+}
