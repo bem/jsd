@@ -26,34 +26,24 @@ function iterateAndSaveClassesFactory(ctx, moduleNode) {
     return function iterateAndSaveClasses(jsdocNode) {
         if(!jsdocNode) return;
 
-        var type = jsdocNode.type,
-            jsType = jsdocNode.jsType;
+        var jsType = jsdocNode.jsType;
 
-        if(type === 'type' || type === 'param' || type === 'returns') {
-            switch(jsType) {
-                case 'Object':
-                    for(var prop in jsdocNode.props) {
-                        jsdocNode.props.hasOwnProperty(prop) &&
-                            iterateAndSaveClasses(jsdocNode.props[prop]);
-                    }
-                break;
-
-                case 'Function':
-                    jsdocNode.params && jsdocNode.params.forEach(iterateAndSaveClasses);
-                    iterateAndSaveClasses(jsdocNode.returns);
-                break;
-
-                default:
-                    if(ctx.classes && ctx.classes.hasOwnProperty(jsType)) {
-                        (moduleNode.classes || (moduleNode.classes = {}))[jsType] = ctx.classes[jsType];
-                        iterateAndSaveClasses(ctx.classes[jsType]);
-                    }
+        if(jsType) {
+            if(ctx.classes && ctx.classes.hasOwnProperty(jsType)) {
+                (moduleNode.classes || (moduleNode.classes = {}))[jsType] = ctx.classes[jsType];
+                iterateAndSaveClasses(ctx.classes[jsType]);
             }
         }
-        else if(type === 'class') {
-            iterateAndSaveClasses(jsdocNode.proto);
-            iterateAndSaveClasses(jsdocNode.static);
-            iterateAndSaveClasses(jsdocNode.augments);
+
+        for(var i in jsdocNode) {
+            if(jsdocNode.hasOwnProperty(i)) {
+                var prop = jsdocNode[i];
+                if(prop && typeof prop === 'object') {
+                    Array.isArray(prop)?
+                        prop.forEach(iterateAndSaveClasses) :
+                        iterateAndSaveClasses(prop);
+                }
+            }
         }
     }
 }
