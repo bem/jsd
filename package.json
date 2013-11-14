@@ -16,6 +16,7 @@
         "istanbul" : "0.1.44"
     },
     "scripts" : {
-        "test" : "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
+        "test" : "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
+        "accept-all-test" : "for i in `find test/ -name *.res.json`; do cp $i `echo $i | sed 's/res.//'`; done"
     }
 }
