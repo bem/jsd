@@ -18,7 +18,13 @@ var undef,
      * @alias events:Event
      */
     Event = inherit(/** @lends Event.prototype */{
+        /**
+         * @constructor
+         * @param {String} type
+         * @param {Object} target
+         */
         __constructor : function(type, target) {
+            /** @member {String} Event */
             this.type = type;
             this.target = target;
             this.result = undef;
