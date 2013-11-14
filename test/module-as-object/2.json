@@ -20,6 +20,11 @@
                             "type": "type",
                             "jsType": "Object",
                             "props": {}
+                        },
+                        "members": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
                         }
                     },
                     "export2": {

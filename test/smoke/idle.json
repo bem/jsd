@@ -48,6 +48,11 @@
                             }
                         }
                     },
+                    "members": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
+                    },
                     "augments": {
                         "type": "type",
                         "jsType": "events:Emitter"

@@ -22,6 +22,11 @@
                         "jsType": "Object",
                         "props": {}
                     },
+                    "members": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
+                    },
                     "augments": {
                         "type": "type",
                         "jsType": "A"
@@ -45,6 +50,11 @@
                                 "description": "MethodA"
                             }
                         }
+                    },
+                    "members": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
                     }
                 }
             }
