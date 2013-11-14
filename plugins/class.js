@@ -1,3 +1,5 @@
+var JSPATH = require('jspath');
+
 module.exports = function(jsdoc) {
     jsdoc
         .registerParser('class', function(comment) {
@@ -14,7 +16,7 @@ module.exports = function(jsdoc) {
             };
         })
         .registerBuilder('class', function(tag) {
-            return addClassNode(this, tag.name);
+            return this.currentClass = addClassNode(this, tag.name);
         })
         .registerBuilder('lends', function(tag) {
             var matches = tag.to.split('.');
@@ -24,7 +26,19 @@ module.exports = function(jsdoc) {
                     'static'];
         })
         .registerBuilder('member', function(tag, curJsdocNode, parentNode, astNode) {
-            console.log(astNode);
+            var name = JSPATH(
+                '.{.type === "ExpressionStatement"}' +
+                    '.expression{.type === "AssignmentExpression"}' +
+                        '.left{.type === "MemberExpression" && .object.type === "ThisExpression"}' +
+                            '.property{.type === "Identifier"}.name[0]',
+                astNode);
+
+            if(!name) throw Error('Using @member for unsupported statement');
+
+            var className = tag.of || (this.currentClass && this.currentClass.name);
+            if(!className) throw Error('Using @member for undetected class');
+
+            return addClassNode(this, className).members.props[name] = { type : 'type', jsType : tag.jsType };
         });
 };
 

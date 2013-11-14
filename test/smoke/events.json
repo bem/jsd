@@ -20,6 +20,27 @@
                             "type": "type",
                             "jsType": "Object",
                             "props": {
+                                "__constructor": {
+                                    "type": "type",
+                                    "jsType": "Function",
+                                    "isConstructor": true,
+                                    "params": [
+                                        {
+                                            "type": "param",
+                                            "name": "type",
+                                            "description": "",
+                                            "jsType": "String",
+                                            "isOptional": false
+                                        },
+                                        {
+                                            "type": "param",
+                                            "name": "target",
+                                            "description": "",
+                                            "jsType": "Object",
+                                            "isOptional": false
+                                        }
+                                    ]
+                                },
                                 "preventDefault": {
                                     "type": "type",
                                     "jsType": "Function",
@@ -49,6 +70,32 @@
                                         "description": "",
                                         "jsType": "Boolean"
                                     }
+                                }
+                            }
+                        },
+                        "members": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {
+                                "type": {
+                                    "type": "type",
+                                    "jsType": "String",
+                                    "description": "Type"
+                                },
+                                "target": {
+                                    "type": "type",
+                                    "jsType": "String",
+                                    "description": "Target"
+                                },
+                                "result": {
+                                    "type": "type",
+                                    "jsType": "*",
+                                    "description": "Result"
+                                },
+                                "data": {
+                                    "type": "type",
+                                    "jsType": "*",
+                                    "description": "Data"
                                 }
                             }
                         }
@@ -279,6 +326,11 @@
                                     }
                                 }
                             }
+                        },
+                        "members": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
                         }
                     }
                 }

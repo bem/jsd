@@ -7,7 +7,8 @@
     ],
     "dependencies": {
         "esprima" : "1.0.4",
-        "inherit" : "2.1.0"
+        "inherit" : "2.1.0",
+        "jspath" : "0.2.10"
     },
     "devDependencies" : {
         "eyes" : "0.1.8",

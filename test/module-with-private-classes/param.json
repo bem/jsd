@@ -36,6 +36,11 @@
                                 "description": "Method"
                             }
                         }
+                    },
+                    "members": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
                     }
                 }
             }
