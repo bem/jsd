@@ -4,9 +4,18 @@ module.exports = function(jsdoc) {
             return { name : comment };
         })
         .registerBuilder('exports', function(tag, curJsdocNode) {
-            var matches = tag.name.split(':'),
+            var exportsName = tag.name;
+
+            if(!exportsName) {
+                if(!this.currentModule)
+                    throw Error('Can not find module for implicit @exports');
+                    
+                exportsName = this.currentModule.name;
+            }
+
+            var matches = exportsName.split(':'),
                 exportedProp = matches[1],
-                moduleName = exportedProp? matches[0] : tag.name,
+                moduleName = exportedProp? matches[0] : exportsName,
                 module = this.modules[moduleName];
 
             if(!module)

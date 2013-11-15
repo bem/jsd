@@ -4,7 +4,7 @@ module.exports = function(jsdoc) {
             return { name : comment };
         })
         .registerBuilder('module', function(tag, curJsdocNode) {
-            var moduleNode = {
+            var moduleNode = this.currentModule = {
                     type : 'module',
                     name : tag.name,
                     toJSON : toJSONFactory(this)
