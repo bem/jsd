@@ -22,7 +22,8 @@ exports.testPlugins = function(testFile, plugins) {
             'const',
             'deprecated',
             'param',
-            'returns'
+            'returns',
+            'example'
         ]
     ).forEach(function(plugin) {
         jsdoc.registerPlugin(PATH.join(PRJ_ROOT, 'plugins', plugin));
