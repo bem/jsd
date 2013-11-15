@@ -1,7 +1,7 @@
 module.exports = function(jsdoc) {
     jsdoc
         .registerParser('param', function(comment) {
-            var match = comment.match(/^(?:{([^}]+)}\s+)?(\S+)\s*(.*?)\s*$/),
+            var match = comment.match(/^(?:{([^}]+)}\s+)?(\S+)\s*([\s\S\n]*?)\s*$/),
                 name = match[2],
                 isOptional = name[0] === '[',
                 defaultVal;
