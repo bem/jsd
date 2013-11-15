@@ -53,6 +53,11 @@
                                 "description": "MethodA"
                             }
                         }
+                    },
+                    "members": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
                     }
                 },
                 "B": {
@@ -73,6 +78,11 @@
                                 "description": "MethodB"
                             }
                         }
+                    },
+                    "members": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
                     }
                 }
             }

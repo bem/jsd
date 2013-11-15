@@ -1,0 +1,64 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "idle",
+            "exports": {
+                "type": "type",
+                "jsType": "Idle"
+            },
+            "classes": {
+                "Idle": {
+                    "type": "class",
+                    "name": "Idle",
+                    "static": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
+                    },
+                    "proto": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {
+                            "__constructor": {
+                                "type": "type",
+                                "jsType": "Function",
+                                "isConstructor": true
+                            },
+                            "start": {
+                                "type": "type",
+                                "jsType": "Function",
+                                "description": "Starts monitoring of idle state"
+                            },
+                            "stop": {
+                                "type": "type",
+                                "jsType": "Function",
+                                "description": "Stop monitoring of idle state"
+                            },
+                            "isIdle": {
+                                "type": "type",
+                                "jsType": "Function",
+                                "description": "Returns whether state is idle",
+                                "returns": {
+                                    "type": "returns",
+                                    "description": "",
+                                    "jsType": "Boolean"
+                                }
+                            }
+                        }
+                    },
+                    "members": {
+                        "type": "type",
+                        "jsType": "Object",
+                        "props": {}
+                    },
+                    "augments": {
+                        "type": "type",
+                        "jsType": "events:Emitter"
+                    }
+                }
+            }
+        }
+    ]
+}

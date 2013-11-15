@@ -27,6 +27,11 @@
                             "description": "Description of method2"
                         }
                     }
+                },
+                "members": {
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {}
                 }
             }
         }

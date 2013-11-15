@@ -61,6 +61,9 @@ function buildTypeNode(jsdocNode, astNode) {
 }
 
 function buildTypeNodeInProperty(jsdocNode, astNode, jsType) {
+    if(jsdocNode.type !== 'type' || jsdocNode.jsType !== 'Object')
+        throw Error('Can not add property to non-object node');
+
     var res = { type : 'type', jsType : jsType };
     jsdocNode.props[astNode.key.value || astNode.key.name] = res;
     return res;
