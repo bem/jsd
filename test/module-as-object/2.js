@@ -6,7 +6,7 @@ modules.define('my-module', function(provide) {
 
 /**
  * @class Export1
- * @alias my-module:Export1
+ * @exports my-module:Export1
  */
 var Export1 = inherit({});
 

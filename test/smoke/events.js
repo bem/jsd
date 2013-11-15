@@ -15,7 +15,7 @@ var undef,
 
     /**
      * @class Event
-     * @alias events:Event
+     * @exports events:Event
      */
     Event = inherit(/** @lends Event.prototype */{
         /**
@@ -282,7 +282,7 @@ var undef,
 
 /**
  * @class Emitter
- * @alias events:Emitter
+ * @exports events:Emitter
  */
 var Emitter = inherit(
         EmitterProps,
