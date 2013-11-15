@@ -11,7 +11,7 @@ modules.define('my-module', function(provide) {
 var ModuleClass = inherit(/** @lends ModuleClass.prototype */{
     /**
      * Description of method1
-     * @protected
+     * @private
      */
     method1 : function() {
 
@@ -19,13 +19,27 @@ var ModuleClass = inherit(/** @lends ModuleClass.prototype */{
 
     /**
      * Description of method2
+     * @protected
      */
     method2 : function() {
+    },
+
+    /**
+     * Description of method3
+     * @public
+     */
+    method3 : function() {
+    },
+
+    /**
+     * Description of method4
+     */
+    method4 : function() {
     }
 }, /** @lends ModuleClass */ {
     /**
      * Description of static method
-     * @protected
+     * @private
      */
     staticMethod : function() {
 

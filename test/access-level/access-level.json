@@ -15,7 +15,7 @@
                             "type": "type",
                             "jsType": "Function",
                             "description": "Description of static method",
-                            "isProtected": true
+                            "accessLevel": "private"
                         }
                     }
                 },
@@ -27,12 +27,24 @@
                             "type": "type",
                             "jsType": "Function",
                             "description": "Description of method1",
-                            "isProtected": true
+                            "accessLevel": "private"
                         },
                         "method2": {
                             "type": "type",
                             "jsType": "Function",
-                            "description": "Description of method2"
+                            "description": "Description of method2",
+                            "accessLevel": "protected"
+                        },
+                        "method3": {
+                            "type": "type",
+                            "jsType": "Function",
+                            "description": "Description of method3",
+                            "accessLevel": "public"
+                        },
+                        "method4": {
+                            "type": "type",
+                            "jsType": "Function",
+                            "description": "Description of method4"
                         }
                     }
                 },
