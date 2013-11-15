@@ -4,20 +4,20 @@ module.exports = function(jsdoc) {
             return { name : comment };
         })
         .registerBuilder('exports', function(tag, curJsdocNode) {
-            var module = this.modules[tag.name];
-            if(!module) throw Error('Unknown module: ' + tag.name);
-            return module.exports || (module.exports = curJsdocNode);
-        })
-        .registerBuilder('alias', function(tag, curJsdocNode) {
-            var matches = tag.to.split(':');
+            var matches = tag.name.split(':'),
+                exportedProp = matches[1],
+                moduleName = exportedProp? matches[0] : tag.name,
+                module = this.modules[moduleName];
 
-            if(matches[1]) {
-                var module = this.modules[matches[0]];
+            if(!module)
+                throw Error('Unknown module: ' + moduleName);
+
+            return exportedProp?
                 (module.exports || (module.exports = {
                     type : 'type',
                     jsType : 'Object',
                     props : {}
-                })).props[matches[1]] = curJsdocNode;
-            }
+                })).props[exportedProp] = curJsdocNode :
+                module.exports || (module.exports = curJsdocNode);
         });
 };

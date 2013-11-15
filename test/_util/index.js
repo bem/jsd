@@ -14,7 +14,6 @@ exports.testPlugins = function(testFile, plugins) {
             'module',
             'type',
             'exports',
-            'alias',
             'description',
             'constructor',
             'augments',
