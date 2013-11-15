@@ -1,0 +1,47 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "class",
+                "name": "ModuleClass",
+                "static": {
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {
+                        "staticMethod": {
+                            "type": "type",
+                            "jsType": "Function",
+                            "description": "Description of static method",
+                            "isProtected": true
+                        }
+                    }
+                },
+                "proto": {
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {
+                        "method1": {
+                            "type": "type",
+                            "jsType": "Function",
+                            "description": "Description of method1",
+                            "isProtected": true
+                        },
+                        "method2": {
+                            "type": "type",
+                            "jsType": "Function",
+                            "description": "Description of method2"
+                        }
+                    }
+                },
+                "members": {
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {}
+                }
+            }
+        }
+    ]
+}
