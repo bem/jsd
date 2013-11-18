@@ -10,8 +10,9 @@ exports.testPlugins = function(testFile, plugins) {
     (
         plugins ||
         [
-            'class',
             'module',
+            'class',
+            'event',
             'type',
             'exports',
             'description',
