@@ -1,0 +1,63 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "my-module",
+            "exports": {
+                "type": "class",
+                "name": "ModuleClass",
+                "static": {
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {}
+                },
+                "proto": {
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {}
+                },
+                "members": {
+                    "type": "type",
+                    "jsType": "Object",
+                    "props": {}
+                },
+                "events": [
+                    {
+                        "type": "event",
+                        "name": "event1",
+                        "params": [
+                            {
+                                "type": "param",
+                                "name": "e",
+                                "description": "",
+                                "jsType": "events:Event",
+                                "isOptional": false
+                            },
+                            {
+                                "type": "param",
+                                "name": "data",
+                                "description": "",
+                                "jsType": "Object",
+                                "isOptional": false
+                            }
+                        ]
+                    },
+                    {
+                        "type": "event",
+                        "name": "event2",
+                        "params": [
+                            {
+                                "type": "param",
+                                "name": "e",
+                                "description": "",
+                                "jsType": "events:Event",
+                                "isOptional": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

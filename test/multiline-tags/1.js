@@ -7,6 +7,7 @@
  * multi
  * line
  * @exports my-module
+ * @type Function
  * @param {*} a Param
  *              multiline
  * @param {*} b Param
