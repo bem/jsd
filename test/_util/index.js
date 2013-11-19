@@ -20,6 +20,7 @@ exports.testPlugins = function(testFile, plugins) {
             'access-level',
             'augments',
             'author',
+            'version',
             'const',
             'deprecated',
             'param',
