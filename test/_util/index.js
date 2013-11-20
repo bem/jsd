@@ -18,6 +18,7 @@ exports.testPlugins = function(testFile, plugins) {
             'description',
             'constructor',
             'access-level',
+            'final',
             'augments',
             'author',
             'version',
