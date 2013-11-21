@@ -1,0 +1,65 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "i-bem__dom",
+            "exports": {
+                "type": "type",
+                "jsType": "Object",
+                "props": {
+                    "blocks.my-block__my-elem1": {
+                        "type": "class",
+                        "name": "my-block__my-elem1",
+                        "static": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "proto": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "members": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "bem": {
+                            "type": "bem",
+                            "block": "my-block",
+                            "elem": "my-elem1"
+                        }
+                    },
+                    "blocks.my-block__my-elem2": {
+                        "type": "class",
+                        "name": "my-block__my-elem2",
+                        "static": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "proto": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "members": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "bem": {
+                            "type": "bem",
+                            "block": "my-block",
+                            "elem": "my-elem2",
+                            "modName": "my-mod",
+                            "modVal": "my-val"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
