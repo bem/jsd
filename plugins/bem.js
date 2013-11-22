@@ -1,7 +1,9 @@
+var JSPATH = require('jspath');
+
 module.exports = function(jsdoc) {
     jsdoc
         .registerParser('bem', function(comment) {
-            var matches = comment.match(/([a-zA-Z0-9-]+)(?:__([a-zA-Z0-9-]+))?(?:_([a-zA-Z0-9-]+)(?:_([a-zA-Z0-9-_]+))?)?/),
+            var matches = comment.match(/([a-zA-Z0-9-]+)(?:__([a-zA-Z0-9-]+))?(?:_([a-zA-Z0-9-]+)(?:_([a-zA-Z0-9-_]+))?)?/) || [],
                 val = matches[4] && matches[4].split('_');
             return {
                 block : matches[1],
@@ -24,16 +26,18 @@ module.exports = function(jsdoc) {
                 description : matches[2]
             };
         })
-        .registerBuilder('bem', function(tag, curJsdocNode) {
+        .registerBuilder('bem', function(tag, curJsdocNode, _, astNode) {
             if(curJsdocNode.type !== 'class') throw Error('@bem can be mixed with @class only');
 
-            curJsdocNode.bem = {
-                type : 'bem',
-                block : tag.block,
-                elem : tag.elem,
-                modName : tag.modName,
-                modVal : tag.modVal
-            };
+            curJsdocNode.bem = tag.block?
+               {
+                    type : 'bem',
+                    block : tag.block,
+                    elem : tag.elem,
+                    modName : tag.modName,
+                    modVal : tag.modVal
+                } :
+                parseBEMFromAST(astNode);
         })
         .registerBuilder('bemmod', function(tag, curJsdocNode) {
             var curMod = this.curMod = {
@@ -61,3 +65,34 @@ module.exports = function(jsdoc) {
             }
         });
 };
+
+function parseBEMFromAST(astNode) {
+    astNode = JSPATH(
+        '.{.type === "ExpressionStatement"}' +
+            '.expression{.type === "CallExpression"}' +
+                '.arguments[0]',
+        astNode);
+
+    var bem = { type : 'bem' };
+
+    if(astNode && astNode.type === 'Literal')
+        bem.block = astNode.value;
+    else if(astNode && astNode.type === 'ObjectExpression') {
+        astNode.properties.forEach(function(prop) {
+            var name = prop.key.value || prop.key.name,
+                valueNode = prop.value;
+            if(valueNode.type === 'Literal')
+                bem[name] = valueNode.value;
+            else if(name === 'modVal' && valueNode.type === 'ArrayExpression') {
+                bem[name] = valueNode.elements.map(function(itemNode) {
+                    if(itemNode.type === 'Literal') return itemNode.value;
+                        else throw Error('Can\'t implicit parse BEM modifier values from source, use explicit @bem tag.');
+                });
+            } else
+                throw Error('Can\'t implicit parse BEM ' + name + ' from source, use explicit @bem tag.');
+        });
+    } else
+        throw Error('Can\'t implicit parse BEM item from source, use explicit @bem tag.');
+
+    return bem;
+}
