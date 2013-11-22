@@ -10,34 +10,43 @@
                 "static": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {
-                        "staticMethod": {
-                            "jsdocType": "type",
-                            "jsType": "Function",
-                            "description": "Description of static method"
+                    "props": [
+                        {
+                            "key": "staticMethod",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of static method"
+                            }
                         }
-                    }
+                    ]
                 },
                 "proto": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {
-                        "method1": {
-                            "jsdocType": "type",
-                            "jsType": "Function",
-                            "description": "Description of method1"
+                    "props": [
+                        {
+                            "key": "method1",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method1"
+                            }
                         },
-                        "method2": {
-                            "jsdocType": "type",
-                            "jsType": "Function",
-                            "description": "Description of method2"
+                        {
+                            "key": "method2",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method2"
+                            }
                         }
-                    }
+                    ]
                 },
                 "members": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 }
             }
         }

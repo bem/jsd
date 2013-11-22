@@ -20,23 +20,26 @@
                     "static": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "method": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "description": "Method"
+                        "props": [
+                            {
+                                "key": "method",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Method"
+                                }
                             }
-                        }
+                        ]
                     },
                     "members": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     }
                 }
             }

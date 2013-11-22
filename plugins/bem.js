@@ -27,7 +27,10 @@ module.exports = function(jsdoc) {
             };
         })
         .registerBuilder('bem', function(tag, curJsdocNode, _, astNode) {
-            if(curJsdocNode.jsdocType !== 'class') throw Error('@bem can be mixed with @class only');
+            if(curJsdocNode.jsdocType !== 'class') {
+                console.log('!!!!!!!!!!!!!!!!', curJsdocNode);
+                throw Error('@bem can be mixed with @class only');
+            }
 
             curJsdocNode.bem = tag.block?
                {

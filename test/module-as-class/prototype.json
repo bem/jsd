@@ -10,28 +10,34 @@
                 "static": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 },
                 "proto": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {
-                        "method1": {
-                            "jsdocType": "type",
-                            "jsType": "Function",
-                            "description": "Description of method1"
+                    "props": [
+                        {
+                            "key": "method1",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method1"
+                            }
                         },
-                        "method2": {
-                            "jsdocType": "type",
-                            "jsType": "Function",
-                            "description": "Description of method2"
+                        {
+                            "key": "method2",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method2"
+                            }
                         }
-                    }
+                    ]
                 },
                 "members": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 }
             }
         }

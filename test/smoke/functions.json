@@ -7,32 +7,38 @@
             "exports": {
                 "jsdocType": "type",
                 "jsType": "Object",
-                "props": {
-                    "isFunction": {
-                        "jsdocType": "type",
-                        "jsType": "Function",
-                        "description": "Checks whether a given object is function",
-                        "params": [
-                            {
-                                "jsdocType": "param",
-                                "name": "obj",
+                "props": [
+                    {
+                        "key": "isFunction",
+                        "val": {
+                            "jsdocType": "type",
+                            "jsType": "Function",
+                            "description": "Checks whether a given object is function",
+                            "params": [
+                                {
+                                    "jsdocType": "param",
+                                    "name": "obj",
+                                    "description": "",
+                                    "jsType": "*",
+                                    "isOptional": false
+                                }
+                            ],
+                            "returns": {
+                                "jsdocType": "returns",
                                 "description": "",
-                                "jsType": "*",
-                                "isOptional": false
+                                "jsType": "Boolean"
                             }
-                        ],
-                        "returns": {
-                            "jsdocType": "returns",
-                            "description": "",
-                            "jsType": "Boolean"
                         }
                     },
-                    "noop": {
-                        "jsdocType": "type",
-                        "jsType": "Function",
-                        "description": "Empty function"
+                    {
+                        "key": "noop",
+                        "val": {
+                            "jsdocType": "type",
+                            "jsType": "Function",
+                            "description": "Empty function"
+                        }
                     }
-                }
+                ]
             }
         }
     ]

@@ -53,7 +53,7 @@ function buildTypeNode(jsdocNode, astNode) {
             };
 
         case 'ObjectExpression':
-            return { jsdocType : 'type', jsType : 'Object', props : {} };
+            return { jsdocType : 'type', jsType : 'Object', props : [] };
 
         default:
             return buildUnknownTypeNode();
@@ -65,7 +65,10 @@ function buildTypeNodeInProperty(jsdocNode, astNode, jsType) {
         throw Error('Can not add property to non-object node');
 
     var res = { jsdocType : 'type', jsType : jsType };
-    jsdocNode.props[astNode.key.value || astNode.key.name] = res;
+    jsdocNode.props.push({
+        key : astNode.key.value || astNode.key.name,
+        val : res
+    });
     return res;
 }
 

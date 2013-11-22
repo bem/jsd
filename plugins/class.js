@@ -38,7 +38,9 @@ module.exports = function(jsdoc) {
             var className = tag.of || (this.currentClass && this.currentClass.name);
             if(!className) throw Error('Using @member for undetected class');
 
-            return addClassNode(this, className).members.props[name] = { jsdocType : 'type', jsType : tag.jsType };
+            var jsdocNode = { jsdocType : 'type', jsType : tag.jsType };
+            addClassNode(this, className).members.props.push({ key : name, val : jsdocNode });
+            return jsdocNode;
         });
 };
 
@@ -47,8 +49,8 @@ function addClassNode(ctx, name) {
     return classes[name] || (classes[name] = {
         jsdocType : 'class',
         name : name,
-        'static' : { jsdocType : 'type', jsType : 'Object', props : {} },
-        proto : { jsdocType : 'type', jsType : 'Object', props : {} },
-        members : { jsdocType : 'type', jsType : 'Object', props : {} }
+        'static' : { jsdocType : 'type', jsType : 'Object', props : [] },
+        proto : { jsdocType : 'type', jsType : 'Object', props : [] },
+        members : { jsdocType : 'type', jsType : 'Object', props : [] }
     });
 }

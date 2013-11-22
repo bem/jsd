@@ -7,13 +7,16 @@
             "exports": {
                 "jsdocType": "type",
                 "jsType": "Object",
-                "props": {
-                    "export": {
-                        "jsdocType": "type",
-                        "jsType": "Function",
-                        "description": "Method export"
+                "props": [
+                    {
+                        "key": "export",
+                        "val": {
+                            "jsdocType": "type",
+                            "jsType": "Function",
+                            "description": "Method export"
+                        }
                     }
-                }
+                ]
             }
         }
     ]

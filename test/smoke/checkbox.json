@@ -7,76 +7,85 @@
             "exports": {
                 "jsdocType": "type",
                 "jsType": "Object",
-                "props": {
-                    "blocks.checkbox": {
-                        "jsdocType": "class",
-                        "name": "checkbox",
-                        "static": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "proto": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {
-                                "getVal": {
-                                    "jsdocType": "type",
-                                    "jsType": "Function",
-                                    "description": "Returns control value",
-                                    "returns": {
-                                        "jsdocType": "returns",
-                                        "description": "",
-                                        "jsType": "String"
-                                    }
-                                },
-                                "getName": {
-                                    "jsdocType": "type",
-                                    "jsType": "Function",
-                                    "description": "Returns name of control",
-                                    "returns": {
-                                        "jsdocType": "returns",
-                                        "description": "",
-                                        "jsType": "String"
-                                    }
-                                }
-                            }
-                        },
-                        "members": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "bem": {
-                            "jsdocType": "bem",
-                            "block": "checkbox",
-                            "mods": [
-                                {
-                                    "jsdocType": "bemmod",
-                                    "mod": "checked",
-                                    "description": "Represents checkbox checked state"
-                                },
-                                {
-                                    "jsdocType": "bemmod",
-                                    "mod": "disabled",
-                                    "description": "Represents checkbox disabled state"
-                                },
-                                {
-                                    "jsdocType": "bemmod",
-                                    "mod": "focused",
-                                    "description": "Represents checkbox focused state",
-                                    "vals": [
-                                        {
-                                            "jsdocType": "bemval",
-                                            "val": "true",
-                                            "description": "focused"
+                "props": [
+                    {
+                        "key": "blocks.checkbox",
+                        "val": {
+                            "jsdocType": "class",
+                            "name": "checkbox",
+                            "static": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "proto": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": [
+                                    {
+                                        "key": "getVal",
+                                        "val": {
+                                            "jsdocType": "type",
+                                            "jsType": "Function",
+                                            "description": "Returns control value",
+                                            "returns": {
+                                                "jsdocType": "returns",
+                                                "description": "",
+                                                "jsType": "String"
+                                            }
                                         }
-                                    ]
-                                }
-                            ]
+                                    },
+                                    {
+                                        "key": "getName",
+                                        "val": {
+                                            "jsdocType": "type",
+                                            "jsType": "Function",
+                                            "description": "Returns name of control",
+                                            "returns": {
+                                                "jsdocType": "returns",
+                                                "description": "",
+                                                "jsType": "String"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "members": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "bem": {
+                                "jsdocType": "bem",
+                                "block": "checkbox",
+                                "mods": [
+                                    {
+                                        "jsdocType": "bemmod",
+                                        "mod": "checked",
+                                        "description": "Represents checkbox checked state"
+                                    },
+                                    {
+                                        "jsdocType": "bemmod",
+                                        "mod": "disabled",
+                                        "description": "Represents checkbox disabled state"
+                                    },
+                                    {
+                                        "jsdocType": "bemmod",
+                                        "mod": "focused",
+                                        "description": "Represents checkbox focused state",
+                                        "vals": [
+                                            {
+                                                "jsdocType": "bemval",
+                                                "val": "true",
+                                                "description": "focused"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         }
                     }
-                }
+                ]
             }
         }
     ]

@@ -15,43 +15,55 @@
                     "static": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "__constructor": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "isConstructor": true
+                        "props": [
+                            {
+                                "key": "__constructor",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "isConstructor": true
+                                }
                             },
-                            "start": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "description": "Starts monitoring of idle state"
+                            {
+                                "key": "start",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Starts monitoring of idle state"
+                                }
                             },
-                            "stop": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "description": "Stop monitoring of idle state"
+                            {
+                                "key": "stop",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Stop monitoring of idle state"
+                                }
                             },
-                            "isIdle": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "description": "Returns whether state is idle",
-                                "returns": {
-                                    "jsdocType": "returns",
-                                    "description": "",
-                                    "jsType": "Boolean"
+                            {
+                                "key": "isIdle",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Returns whether state is idle",
+                                    "returns": {
+                                        "jsdocType": "returns",
+                                        "description": "",
+                                        "jsType": "Boolean"
+                                    }
                                 }
                             }
-                        }
+                        ]
                     },
                     "members": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "augments": {
                         "jsdocType": "type",

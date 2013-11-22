@@ -10,17 +10,17 @@
                 "static": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 },
                 "proto": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 },
                 "members": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 },
                 "events": [
                     {

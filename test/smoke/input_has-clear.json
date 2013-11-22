@@ -7,32 +7,35 @@
             "exports": {
                 "jsdocType": "type",
                 "jsType": "Object",
-                "props": {
-                    "blocks.input": {
-                        "jsdocType": "class",
-                        "name": "input",
-                        "static": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "proto": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "members": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "bem": {
-                            "jsdocType": "bem",
-                            "block": "input",
-                            "modName": "has-clear"
+                "props": [
+                    {
+                        "key": "blocks.input",
+                        "val": {
+                            "jsdocType": "class",
+                            "name": "input",
+                            "static": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "proto": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "members": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "bem": {
+                                "jsdocType": "bem",
+                                "block": "input",
+                                "modName": "has-clear"
+                            }
                         }
                     }
-                }
+                ]
             }
         }
     ]

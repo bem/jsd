@@ -7,58 +7,64 @@
             "exports": {
                 "jsdocType": "type",
                 "jsType": "Object",
-                "props": {
-                    "blocks.my-block__my-elem1": {
-                        "jsdocType": "class",
-                        "name": "my-block__my-elem1",
-                        "static": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "proto": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "members": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "bem": {
-                            "jsdocType": "bem",
-                            "block": "my-block",
-                            "elem": "my-elem1"
+                "props": [
+                    {
+                        "key": "blocks.my-block__my-elem1",
+                        "val": {
+                            "jsdocType": "class",
+                            "name": "my-block__my-elem1",
+                            "static": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "proto": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "members": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "bem": {
+                                "jsdocType": "bem",
+                                "block": "my-block",
+                                "elem": "my-elem1"
+                            }
                         }
                     },
-                    "blocks.my-block__my-elem2": {
-                        "jsdocType": "class",
-                        "name": "my-block__my-elem2",
-                        "static": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "proto": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "members": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "bem": {
-                            "jsdocType": "bem",
-                            "block": "my-block",
-                            "elem": "my-elem2",
-                            "modName": "my-mod",
-                            "modVal": "my-val"
+                    {
+                        "key": "blocks.my-block__my-elem2",
+                        "val": {
+                            "jsdocType": "class",
+                            "name": "my-block__my-elem2",
+                            "static": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "proto": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "members": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "bem": {
+                                "jsdocType": "bem",
+                                "block": "my-block",
+                                "elem": "my-elem2",
+                                "modName": "my-mod",
+                                "modVal": "my-val"
+                            }
                         }
                     }
-                }
+                ]
             }
         }
     ]

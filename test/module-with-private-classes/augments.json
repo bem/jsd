@@ -15,17 +15,17 @@
                     "static": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "members": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "augments": {
                         "jsdocType": "type",
@@ -38,23 +38,26 @@
                     "static": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "methodA": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "description": "MethodA"
+                        "props": [
+                            {
+                                "key": "methodA",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "MethodA"
+                                }
                             }
-                        }
+                        ]
                     },
                     "members": {
                         "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     }
                 }
             }

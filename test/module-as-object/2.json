@@ -7,32 +7,38 @@
             "exports": {
                 "jsdocType": "type",
                 "jsType": "Object",
-                "props": {
-                    "Export1": {
-                        "jsdocType": "class",
-                        "name": "Export1",
-                        "static": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "proto": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
-                        },
-                        "members": {
-                            "jsdocType": "type",
-                            "jsType": "Object",
-                            "props": {}
+                "props": [
+                    {
+                        "key": "Export1",
+                        "val": {
+                            "jsdocType": "class",
+                            "name": "Export1",
+                            "static": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "proto": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            },
+                            "members": {
+                                "jsdocType": "type",
+                                "jsType": "Object",
+                                "props": []
+                            }
                         }
                     },
-                    "export2": {
-                        "jsdocType": "type",
-                        "jsType": "Function",
-                        "description": "Method export2"
+                    {
+                        "key": "export2",
+                        "val": {
+                            "jsdocType": "type",
+                            "jsType": "Function",
+                            "description": "Method export2"
+                        }
                     }
-                }
+                ]
             }
         }
     ]

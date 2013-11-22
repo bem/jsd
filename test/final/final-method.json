@@ -10,24 +10,27 @@
                 "static": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 },
                 "proto": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {
-                        "method1": {
-                            "jsdocType": "type",
-                            "jsType": "Function",
-                            "description": "Description of method1",
-                            "isFinal": true
+                    "props": [
+                        {
+                            "key": "method1",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method1",
+                                "isFinal": true
+                            }
                         }
-                    }
+                    ]
                 },
                 "members": {
                     "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 }
             }
         }
