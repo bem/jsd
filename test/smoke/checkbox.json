@@ -2,40 +2,40 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "i-bem__dom",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
                 "props": {
                     "blocks.checkbox": {
-                        "type": "class",
+                        "jsdocType": "class",
                         "name": "checkbox",
                         "static": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "proto": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {
                                 "getVal": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Returns control value",
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "String"
                                     }
                                 },
                                 "getName": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Returns name of control",
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "String"
                                     }
@@ -43,31 +43,31 @@
                             }
                         },
                         "members": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "bem": {
-                            "type": "bem",
+                            "jsdocType": "bem",
                             "block": "checkbox",
                             "mods": [
                                 {
-                                    "type": "bemmod",
+                                    "jsdocType": "bemmod",
                                     "mod": "checked",
                                     "description": "Represents checkbox checked state"
                                 },
                                 {
-                                    "type": "bemmod",
+                                    "jsdocType": "bemmod",
                                     "mod": "disabled",
                                     "description": "Represents checkbox disabled state"
                                 },
                                 {
-                                    "type": "bemmod",
+                                    "jsdocType": "bemmod",
                                     "mod": "focused",
                                     "description": "Represents checkbox focused state",
                                     "vals": [
                                         {
-                                            "type": "bemval",
+                                            "jsdocType": "bemval",
                                             "val": "true",
                                             "description": "focused"
                                         }

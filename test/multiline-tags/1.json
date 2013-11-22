@@ -2,22 +2,22 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Function",
                 "description": "Description\nmulti\nline",
                 "params": [
                     {
-                        "type": "param",
+                        "jsdocType": "param",
                         "name": "a",
                         "description": "Param\nmultiline",
                         "jsType": "*",
                         "isOptional": false
                     },
                     {
-                        "type": "param",
+                        "jsdocType": "param",
                         "name": "b",
                         "description": "Param\nmultiline",
                         "jsType": "*",

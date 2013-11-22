@@ -2,19 +2,19 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "functions",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
                 "props": {
                     "isFunction": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Function",
                         "description": "Checks whether a given object is function",
                         "params": [
                             {
-                                "type": "param",
+                                "jsdocType": "param",
                                 "name": "obj",
                                 "description": "",
                                 "jsType": "*",
@@ -22,13 +22,13 @@
                             }
                         ],
                         "returns": {
-                            "type": "returns",
+                            "jsdocType": "returns",
                             "description": "",
                             "jsType": "Boolean"
                         }
                     },
                     "noop": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Function",
                         "description": "Empty function"
                     }

@@ -2,43 +2,43 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "i-bem__dom",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
                 "props": {
                     "blocks.my-block": {
-                        "type": "class",
+                        "jsdocType": "class",
                         "name": "my-block",
                         "static": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "proto": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "members": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "bem": {
-                            "type": "bem",
+                            "jsdocType": "bem",
                             "block": "my-block",
                             "params": [
                                 {
-                                    "type": "param",
+                                    "jsdocType": "param",
                                     "name": "p1",
                                     "description": "Param 1 description",
                                     "jsType": "String",
                                     "isOptional": false
                                 },
                                 {
-                                    "type": "param",
+                                    "jsdocType": "param",
                                     "name": "p2",
                                     "description": "Param 2 description",
                                     "jsType": "Boolean",

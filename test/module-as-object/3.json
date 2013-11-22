@@ -2,14 +2,14 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
                 "props": {
                     "export": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Function",
                         "description": "Method export"
                     }

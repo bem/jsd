@@ -38,17 +38,17 @@ module.exports = function(jsdoc) {
             var className = tag.of || (this.currentClass && this.currentClass.name);
             if(!className) throw Error('Using @member for undetected class');
 
-            return addClassNode(this, className).members.props[name] = { type : 'type', jsType : tag.jsType };
+            return addClassNode(this, className).members.props[name] = { jsdocType : 'type', jsType : tag.jsType };
         });
 };
 
 function addClassNode(ctx, name) {
     var classes = ctx.classes || (ctx.classes = {});
     return classes[name] || (classes[name] = {
-        type : 'class',
+        jsdocType : 'class',
         name : name,
-        'static' : { type : 'type', jsType : 'Object', props : {} },
-        proto : { type : 'type', jsType : 'Object', props : {} },
-        members : { type : 'type', jsType : 'Object', props : {} }
+        'static' : { jsdocType : 'type', jsType : 'Object', props : {} },
+        proto : { jsdocType : 'type', jsType : 'Object', props : {} },
+        members : { jsdocType : 'type', jsType : 'Object', props : {} }
     });
 }

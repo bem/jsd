@@ -2,40 +2,40 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "class",
+                "jsdocType": "class",
                 "name": "ModuleClass",
                 "static": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
                     "props": {}
                 },
                 "proto": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
                     "props": {}
                 },
                 "members": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
                     "props": {}
                 },
                 "events": [
                     {
-                        "type": "event",
+                        "jsdocType": "event",
                         "name": "event1",
                         "params": [
                             {
-                                "type": "param",
+                                "jsdocType": "param",
                                 "name": "e",
                                 "description": "",
                                 "jsType": "events:Event",
                                 "isOptional": false
                             },
                             {
-                                "type": "param",
+                                "jsdocType": "param",
                                 "name": "data",
                                 "description": "",
                                 "jsType": "Object",
@@ -44,11 +44,11 @@
                         ]
                     },
                     {
-                        "type": "event",
+                        "jsdocType": "event",
                         "name": "event2",
                         "params": [
                             {
-                                "type": "param",
+                                "jsdocType": "param",
                                 "name": "e",
                                 "description": "",
                                 "jsType": "events:Event",

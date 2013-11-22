@@ -2,38 +2,38 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "events",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
                 "props": {
                     "Event": {
-                        "type": "class",
+                        "jsdocType": "class",
                         "name": "Event",
                         "static": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "proto": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {
                                 "__constructor": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "isConstructor": true,
                                     "params": [
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "type",
                                             "description": "",
                                             "jsType": "String",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "target",
                                             "description": "",
                                             "jsType": "Object",
@@ -42,31 +42,31 @@
                                     ]
                                 },
                                 "preventDefault": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Prevents default action"
                                 },
                                 "isDefaultPrevented": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Returns whether is default action prevented",
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "Boolean"
                                     }
                                 },
                                 "stopPropagation": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Stops propagation"
                                 },
                                 "isPropagationStopped": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Returns whether is propagation stopped",
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "Boolean"
                                     }
@@ -74,26 +74,26 @@
                             }
                         },
                         "members": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {
                                 "type": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "String",
                                     "description": "Type"
                                 },
                                 "target": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "String",
                                     "description": "Target"
                                 },
                                 "result": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "*",
                                     "description": "Result"
                                 },
                                 "data": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "*",
                                     "description": "Data"
                                 }
@@ -101,45 +101,45 @@
                         }
                     },
                     "Emitter": {
-                        "type": "class",
+                        "jsdocType": "class",
                         "name": "Emitter",
                         "static": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "proto": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {
                                 "on": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Adds an event handler",
                                     "params": [
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "e",
                                             "description": "Event type",
                                             "jsType": "String",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "data",
                                             "description": "Additional data that the handler gets as e.data",
                                             "jsType": "Object",
                                             "isOptional": true
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "fn",
                                             "description": "Handler",
                                             "jsType": "Function",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "ctx",
                                             "description": "Handler context",
                                             "jsType": "Object",
@@ -147,39 +147,39 @@
                                         }
                                     ],
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "this"
                                     }
                                 },
                                 "once": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Adds a one time handler for the event.\nHandler is executed only the next time the event is fired, after which it is removed.",
                                     "params": [
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "e",
                                             "description": "Event type",
                                             "jsType": "String",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "data",
                                             "description": "Additional data that the handler gets as e.data",
                                             "jsType": "Object",
                                             "isOptional": true
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "fn",
                                             "description": "Handler",
                                             "jsType": "Function",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "ctx",
                                             "description": "Handler context",
                                             "jsType": "Object",
@@ -187,32 +187,32 @@
                                         }
                                     ],
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "this"
                                     }
                                 },
                                 "un": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Removes event handler or handlers",
                                     "params": [
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "e",
                                             "description": "Event type",
                                             "jsType": "String",
                                             "isOptional": true
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "fn",
                                             "description": "Handler",
                                             "jsType": "Function",
                                             "isOptional": true
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "ctx",
                                             "description": "Handler context",
                                             "jsType": "Object",
@@ -220,25 +220,25 @@
                                         }
                                     ],
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "this"
                                     }
                                 },
                                 "emit": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Fires event handlers",
                                     "params": [
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "e",
                                             "description": "Event",
                                             "jsType": "String|Event",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "data",
                                             "description": "Additional data",
                                             "jsType": "Object",
@@ -246,29 +246,29 @@
                                         }
                                     ],
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "this"
                                     }
                                 },
                                 "trigger": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Fires event handlers",
                                     "deprecated": {
-                                        "type": "deprecated",
+                                        "jsdocType": "deprecated",
                                         "description": "use emit"
                                     },
                                     "params": [
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "e",
                                             "description": "Event",
                                             "jsType": "String|Event",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "data",
                                             "description": "Additional data",
                                             "jsType": "Object",
@@ -276,43 +276,43 @@
                                         }
                                     ],
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "this"
                                     }
                                 },
                                 "onFirst": {
-                                    "type": "type",
+                                    "jsdocType": "type",
                                     "jsType": "Function",
                                     "description": "Adds a one time handler for the event.\nHandler is executed only the next time the event is fired, after which it is removed.",
                                     "deprecated": {
-                                        "type": "deprecated",
+                                        "jsdocType": "deprecated",
                                         "description": "use once"
                                     },
                                     "params": [
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "e",
                                             "description": "Event type",
                                             "jsType": "String",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "data",
                                             "description": "Additional data that the handler gets as e.data",
                                             "jsType": "Object",
                                             "isOptional": true
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "fn",
                                             "description": "Handler",
                                             "jsType": "Function",
                                             "isOptional": false
                                         },
                                         {
-                                            "type": "param",
+                                            "jsdocType": "param",
                                             "name": "ctx",
                                             "description": "Handler context",
                                             "jsType": "Object",
@@ -320,7 +320,7 @@
                                         }
                                     ],
                                     "returns": {
-                                        "type": "returns",
+                                        "jsdocType": "returns",
                                         "description": "",
                                         "jsType": "this"
                                     }
@@ -328,7 +328,7 @@
                             }
                         },
                         "members": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         }

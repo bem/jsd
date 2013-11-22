@@ -23,7 +23,7 @@ module.exports = function(jsdoc) {
 
             return exportedProp?
                 (module.exports || (module.exports = {
-                    type : 'type',
+                    jsdocType : 'type',
                     jsType : 'Object',
                     props : {}
                 })).props[exportedProp] = curJsdocNode :

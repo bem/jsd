@@ -5,7 +5,7 @@ module.exports = function(jsdoc) {
         })
         .registerBuilder('deprecated', function(tag, curJsdocNode) {
             curJsdocNode.deprecated = {
-                type : 'deprecated',
+                jsdocType : 'deprecated',
                 description : tag.description
             };
         });

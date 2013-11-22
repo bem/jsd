@@ -2,22 +2,22 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "class",
+                "jsdocType": "class",
                 "name": "ModuleClass",
                 "static": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
                     "props": {}
                 },
                 "proto": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
                     "props": {
                         "method1": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Function",
                             "description": "Description of method1",
                             "isFinal": true
@@ -25,7 +25,7 @@
                     }
                 },
                 "members": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
                     "props": {}
                 }

@@ -27,11 +27,11 @@ module.exports = function(jsdoc) {
             };
         })
         .registerBuilder('bem', function(tag, curJsdocNode, _, astNode) {
-            if(curJsdocNode.type !== 'class') throw Error('@bem can be mixed with @class only');
+            if(curJsdocNode.jsdocType !== 'class') throw Error('@bem can be mixed with @class only');
 
             curJsdocNode.bem = tag.block?
                {
-                    type : 'bem',
+                    jsdocType : 'bem',
                     block : tag.block,
                     elem : tag.elem,
                     modName : tag.modName,
@@ -41,7 +41,7 @@ module.exports = function(jsdoc) {
         })
         .registerBuilder('bemmod', function(tag, curJsdocNode) {
             var curMod = this.curMod = {
-                    type : 'bemmod',
+                    jsdocType : 'bemmod',
                     mod : tag.mod,
                     description : tag.description
                 },
@@ -50,7 +50,7 @@ module.exports = function(jsdoc) {
         })
         .registerBuilder('bemval', function(tag) {
             (this.curMod.vals || (this.curMod.vals = [])).push({
-                type : 'bemval',
+                jsdocType : 'bemval',
                 val : tag.val,
                 description : tag.description
             });
@@ -73,7 +73,7 @@ function parseBEMFromAST(astNode) {
                 '.arguments[0]',
         astNode);
 
-    var bem = { type : 'bem' };
+    var bem = { jsdocType : 'bem' };
 
     if(astNode && astNode.type === 'Literal')
         bem.block = astNode.value;

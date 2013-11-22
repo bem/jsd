@@ -2,33 +2,33 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
                 "props": {
                     "Export1": {
-                        "type": "class",
+                        "jsdocType": "class",
                         "name": "Export1",
                         "static": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "proto": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         },
                         "members": {
-                            "type": "type",
+                            "jsdocType": "type",
                             "jsType": "Object",
                             "props": {}
                         }
                     },
                     "export2": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Function",
                         "description": "Method export2"
                     }

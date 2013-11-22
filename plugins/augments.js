@@ -4,6 +4,6 @@ module.exports = function(jsdoc) {
             return { name : comment };
         })
         .registerBuilder('augments', function(tag, curJsdocNode) {
-            curJsdocNode.augments = { type : 'type', jsType : tag.name };
+            curJsdocNode.augments = { jsdocType : 'type', jsType : tag.name };
         });
 };

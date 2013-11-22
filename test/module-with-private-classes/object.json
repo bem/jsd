@@ -2,19 +2,19 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
                 "props": {
                     "method1": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Function",
                         "description": "Method1",
                         "params": [
                             {
-                                "type": "param",
+                                "jsdocType": "param",
                                 "name": "a",
                                 "description": "",
                                 "jsType": "A",
@@ -23,11 +23,11 @@
                         ]
                     },
                     "method2": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Function",
                         "description": "Method2",
                         "returns": {
-                            "type": "returns",
+                            "jsdocType": "returns",
                             "description": "",
                             "jsType": "B"
                         }
@@ -36,51 +36,51 @@
             },
             "classes": {
                 "A": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "A",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
                         "props": {}
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
                         "props": {
                             "methodA": {
-                                "type": "type",
+                                "jsdocType": "type",
                                 "jsType": "Function",
                                 "description": "MethodA"
                             }
                         }
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
                         "props": {}
                     }
                 },
                 "B": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "B",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
                         "props": {}
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
                         "props": {
                             "methodB": {
-                                "type": "type",
+                                "jsdocType": "type",
                                 "jsType": "Function",
                                 "description": "MethodB"
                             }
                         }
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
                         "props": {}
                     }
