@@ -24,10 +24,6 @@ module.exports = function(jsdoc) {
             };
         })
         .registerBuilder('param', function(tag, curJsdocNode) {
-            if(curJsdocNode.jsType !== 'Function' && curJsdocNode.type !== 'event') {
-                throw Error('@param should be inside function or @event');
-            }
-
             (curJsdocNode.params || (curJsdocNode.params = [])).push(
                 {
                     type : 'param',

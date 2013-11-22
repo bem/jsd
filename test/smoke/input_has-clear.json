@@ -1,0 +1,39 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "i-bem__dom",
+            "exports": {
+                "type": "type",
+                "jsType": "Object",
+                "props": {
+                    "blocks.input": {
+                        "type": "class",
+                        "name": "input",
+                        "static": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "proto": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "members": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "bem": {
+                            "type": "bem",
+                            "block": "input",
+                            "modName": "has-clear"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

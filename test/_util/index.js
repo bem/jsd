@@ -25,6 +25,7 @@ exports.testPlugins = function(testFile, plugins) {
             'const',
             'deprecated',
             'param',
+            'bem',
             'returns',
             'example'
         ]

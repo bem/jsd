@@ -1,0 +1,54 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "type": "module",
+            "name": "i-bem__dom",
+            "exports": {
+                "type": "type",
+                "jsType": "Object",
+                "props": {
+                    "blocks.my-block": {
+                        "type": "class",
+                        "name": "my-block",
+                        "static": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "proto": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "members": {
+                            "type": "type",
+                            "jsType": "Object",
+                            "props": {}
+                        },
+                        "bem": {
+                            "type": "bem",
+                            "block": "my-block",
+                            "params": [
+                                {
+                                    "type": "param",
+                                    "name": "p1",
+                                    "description": "Param 1 description",
+                                    "jsType": "String",
+                                    "isOptional": false
+                                },
+                                {
+                                    "type": "param",
+                                    "name": "p2",
+                                    "description": "Param 2 description",
+                                    "jsType": "Boolean",
+                                    "isOptional": false
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
