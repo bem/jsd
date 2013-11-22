@@ -9,7 +9,7 @@ module.exports = function(jsdoc) {
         })
         .registerBuilder('returns', function(tag, curJsdocNode) {
             curJsdocNode.returns = {
-                type : 'returns',
+                jsdocType : 'returns',
                 description : tag.description,
                 jsType : tag.jsType
             };

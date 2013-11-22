@@ -2,41 +2,44 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Function",
                 "returns": {
-                    "type": "returns",
+                    "jsdocType": "returns",
                     "description": "",
                     "jsType": "A"
                 }
             },
             "classes": {
                 "A": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "A",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "method": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "Method"
+                        "props": [
+                            {
+                                "key": "method",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Method"
+                                }
                             }
-                        }
+                        ]
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     }
                 }
             }

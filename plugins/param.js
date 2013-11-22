@@ -26,7 +26,7 @@ module.exports = function(jsdoc) {
         .registerBuilder('param', function(tag, curJsdocNode) {
             (curJsdocNode.params || (curJsdocNode.params = [])).push(
                 {
-                    type : 'param',
+                    jsdocType : 'param',
                     name : tag.name,
                     description : tag.description,
                     jsType : tag.jsType,

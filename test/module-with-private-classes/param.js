@@ -10,8 +10,19 @@ function A() {}
 A.prototype = /** @lends A.prototype */{
     /**
      * Method
+     * @param {B} b
      */
-    method : function() {}
+    method : function(b) {}
+};
+
+/** @class B */
+function B() {}
+
+B.prototype = /** @lends B.prototype */{
+    /**
+     * MethodB
+     */
+    methodB : function() {}
 };
 
 provide(

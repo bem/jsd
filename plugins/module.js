@@ -5,45 +5,22 @@ module.exports = function(jsdoc) {
         })
         .registerBuilder('module', function(tag, curJsdocNode) {
             var moduleNode = this.currentModule = {
-                    type : 'module',
-                    name : tag.name,
-                    toJSON : toJSONFactory(this)
+                    jsdocType : 'module',
+                    name : tag.name
                 };
             (curJsdocNode.modules || (curJsdocNode.modules = [])).push(
                 (this.modules || (this.modules = {}))[tag.name] = moduleNode);
             return moduleNode;
-        });
-};
+        })
+        .registerPostprocessor('', function(jsdocNode, postprocess) {
+            var jsType = jsdocNode.jsType;
 
-function toJSONFactory(ctx) {
-    return function toJSON() {
-        iterateAndSaveClassesFactory(ctx, this)(this.exports);
-        return this;
-    };
-}
-
-function iterateAndSaveClassesFactory(ctx, moduleNode) {
-    return function iterateAndSaveClasses(jsdocNode) {
-        if(!jsdocNode) return;
-
-        var jsType = jsdocNode.jsType;
-
-        if(jsType) {
-            if(ctx.classes && ctx.classes.hasOwnProperty(jsType)) {
-                (moduleNode.classes || (moduleNode.classes = {}))[jsType] = ctx.classes[jsType];
-                iterateAndSaveClasses(ctx.classes[jsType]);
-            }
-        }
-
-        for(var i in jsdocNode) {
-            if(jsdocNode.hasOwnProperty(i)) {
-                var prop = jsdocNode[i];
-                if(prop && typeof prop === 'object') {
-                    Array.isArray(prop)?
-                        prop.forEach(iterateAndSaveClasses) :
-                        iterateAndSaveClasses(prop);
+            if(jsType) {
+                if(this.classes && this.classes.hasOwnProperty(jsType)) {
+                    var curModule = this.currentModule;
+                    postprocess(
+                        (curModule.classes || (curModule.classes = {}))[jsType] = this.classes[jsType]);
                 }
             }
-        }
-    }
-}
+        });
+};

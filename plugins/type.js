@@ -19,7 +19,7 @@ function buildTypeNode(jsdocNode, astNode) {
     switch(astNode.type) {
         case 'FunctionExpression':
         case 'FunctionDeclaration':
-            return { type : 'type', jsType : 'Function' };
+            return { jsdocType : 'type', jsType : 'Function' };
 
         case 'VariableDeclaration':
             return buildTypeNode(jsdocNode, astNode.declarations[0]);
@@ -47,13 +47,13 @@ function buildTypeNode(jsdocNode, astNode) {
 
         case 'Literal':
             return {
-                type : 'type',
+                jsdocType : 'type',
                 jsType : getLiteralJsType(astNode.value),
                 jsValue : astNode.value
             };
 
         case 'ObjectExpression':
-            return { type : 'type', jsType : 'Object', props : {} };
+            return { jsdocType : 'type', jsType : 'Object', props : [] };
 
         default:
             return buildUnknownTypeNode();
@@ -61,16 +61,19 @@ function buildTypeNode(jsdocNode, astNode) {
 }
 
 function buildTypeNodeInProperty(jsdocNode, astNode, jsType) {
-    if(jsdocNode.type !== 'type' || jsdocNode.jsType !== 'Object')
+    if(jsdocNode.jsdocType !== 'type' || jsdocNode.jsType !== 'Object')
         throw Error('Can not add property to non-object node');
 
-    var res = { type : 'type', jsType : jsType };
-    jsdocNode.props[astNode.key.value || astNode.key.name] = res;
+    var res = { jsdocType : 'type', jsType : jsType };
+    jsdocNode.props.push({
+        key : astNode.key.value || astNode.key.name,
+        val : res
+    });
     return res;
 }
 
 function buildUnknownTypeNode() {
-    return { type : 'type', jsType : '*' };
+    return { jsdocType : 'type', jsType : '*' };
 }
 
 function getLiteralJsType(value) {

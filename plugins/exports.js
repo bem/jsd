@@ -21,12 +21,16 @@ module.exports = function(jsdoc) {
             if(!module)
                 throw Error('Unknown module: ' + moduleName);
 
-            return exportedProp?
+            if(exportedProp) {
                 (module.exports || (module.exports = {
-                    type : 'type',
+                    jsdocType : 'type',
                     jsType : 'Object',
-                    props : {}
-                })).props[exportedProp] = curJsdocNode :
-                module.exports || (module.exports = curJsdocNode);
+                    props : []
+                })).props.push({ key : exportedProp, val : curJsdocNode });
+                return curJsdocNode;
+            }
+            else {
+                return module.exports || (module.exports = curJsdocNode);
+            }
         });
 };

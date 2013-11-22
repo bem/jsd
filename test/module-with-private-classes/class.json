@@ -2,105 +2,117 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "C"
             },
             "classes": {
                 "C": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "C",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "method1": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "Method1",
-                                "params": [
-                                    {
-                                        "type": "param",
-                                        "name": "a",
-                                        "description": "",
-                                        "jsType": "A",
-                                        "isOptional": false
-                                    }
-                                ]
+                        "props": [
+                            {
+                                "key": "method1",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Method1",
+                                    "params": [
+                                        {
+                                            "jsdocType": "param",
+                                            "name": "a",
+                                            "description": "",
+                                            "jsType": "A",
+                                            "isOptional": false
+                                        }
+                                    ]
+                                }
                             },
-                            "method2": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "Method2",
-                                "returns": {
-                                    "type": "returns",
-                                    "description": "",
-                                    "jsType": "B"
+                            {
+                                "key": "method2",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Method2",
+                                    "returns": {
+                                        "jsdocType": "returns",
+                                        "description": "",
+                                        "jsType": "B"
+                                    }
                                 }
                             }
-                        }
+                        ]
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     }
                 },
                 "A": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "A",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "methodA": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "MethodA"
+                        "props": [
+                            {
+                                "key": "methodA",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "MethodA"
+                                }
                             }
-                        }
+                        ]
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     }
                 },
                 "B": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "B",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "methodB": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "MethodB"
+                        "props": [
+                            {
+                                "key": "methodB",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "MethodB"
+                                }
                             }
-                        }
+                        ]
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     }
                 }
             }

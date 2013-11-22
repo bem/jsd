@@ -2,59 +2,71 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "idle",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Idle"
             },
             "classes": {
                 "Idle": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "Idle",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "__constructor": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "isConstructor": true
+                        "props": [
+                            {
+                                "key": "__constructor",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "isConstructor": true
+                                }
                             },
-                            "start": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "Starts monitoring of idle state"
+                            {
+                                "key": "start",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Starts monitoring of idle state"
+                                }
                             },
-                            "stop": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "Stop monitoring of idle state"
+                            {
+                                "key": "stop",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Stop monitoring of idle state"
+                                }
                             },
-                            "isIdle": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "Returns whether state is idle",
-                                "returns": {
-                                    "type": "returns",
-                                    "description": "",
-                                    "jsType": "Boolean"
+                            {
+                                "key": "isIdle",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Returns whether state is idle",
+                                    "returns": {
+                                        "jsdocType": "returns",
+                                        "description": "",
+                                        "jsType": "Boolean"
+                                    }
                                 }
                             }
-                        }
+                        ]
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "augments": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "events:Emitter"
                     }
                 }

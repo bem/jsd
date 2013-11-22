@@ -2,37 +2,43 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "functions",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Object",
-                "props": {
-                    "isFunction": {
-                        "type": "type",
-                        "jsType": "Function",
-                        "description": "Checks whether a given object is function",
-                        "params": [
-                            {
-                                "type": "param",
-                                "name": "obj",
+                "props": [
+                    {
+                        "key": "isFunction",
+                        "val": {
+                            "jsdocType": "type",
+                            "jsType": "Function",
+                            "description": "Checks whether a given object is function",
+                            "params": [
+                                {
+                                    "jsdocType": "param",
+                                    "name": "obj",
+                                    "description": "",
+                                    "jsType": "*",
+                                    "isOptional": false
+                                }
+                            ],
+                            "returns": {
+                                "jsdocType": "returns",
                                 "description": "",
-                                "jsType": "*",
-                                "isOptional": false
+                                "jsType": "Boolean"
                             }
-                        ],
-                        "returns": {
-                            "type": "returns",
-                            "description": "",
-                            "jsType": "Boolean"
                         }
                     },
-                    "noop": {
-                        "type": "type",
-                        "jsType": "Function",
-                        "description": "Empty function"
+                    {
+                        "key": "noop",
+                        "val": {
+                            "jsdocType": "type",
+                            "jsType": "Function",
+                            "description": "Empty function"
+                        }
                     }
-                }
+                ]
             }
         }
     ]

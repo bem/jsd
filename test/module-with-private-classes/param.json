@@ -2,14 +2,14 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "type",
+                "jsdocType": "type",
                 "jsType": "Function",
                 "params": [
                     {
-                        "type": "param",
+                        "jsdocType": "param",
                         "name": "a",
                         "description": "",
                         "jsType": "A",
@@ -19,28 +19,68 @@
             },
             "classes": {
                 "A": {
-                    "type": "class",
+                    "jsdocType": "class",
                     "name": "A",
                     "static": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
                     },
                     "proto": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {
-                            "method": {
-                                "type": "type",
-                                "jsType": "Function",
-                                "description": "Method"
+                        "props": [
+                            {
+                                "key": "method",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "Method",
+                                    "params": [
+                                        {
+                                            "jsdocType": "param",
+                                            "name": "b",
+                                            "description": "",
+                                            "jsType": "B",
+                                            "isOptional": false
+                                        }
+                                    ]
+                                }
                             }
-                        }
+                        ]
                     },
                     "members": {
-                        "type": "type",
+                        "jsdocType": "type",
                         "jsType": "Object",
-                        "props": {}
+                        "props": []
+                    }
+                },
+                "B": {
+                    "jsdocType": "class",
+                    "name": "B",
+                    "static": {
+                        "jsdocType": "type",
+                        "jsType": "Object",
+                        "props": []
+                    },
+                    "proto": {
+                        "jsdocType": "type",
+                        "jsType": "Object",
+                        "props": [
+                            {
+                                "key": "methodB",
+                                "val": {
+                                    "jsdocType": "type",
+                                    "jsType": "Function",
+                                    "description": "MethodB"
+                                }
+                            }
+                        ]
+                    },
+                    "members": {
+                        "jsdocType": "type",
+                        "jsType": "Object",
+                        "props": []
                     }
                 }
             }

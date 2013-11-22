@@ -4,7 +4,7 @@ module.exports = function(jsdoc) {
             return { name : comment };
         })
         .registerBuilder('event', function(tag) {
-            var eventNode = { type : 'event', name : tag.name },
+            var eventNode = { jsdocType : 'event', name : tag.name },
                 curClass = this.currentClass;
             (curClass.events || (curClass.events = [])).push(eventNode);
             return eventNode;

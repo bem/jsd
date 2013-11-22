@@ -2,56 +2,71 @@
     "type": "root",
     "modules": [
         {
-            "type": "module",
+            "jsdocType": "module",
             "name": "my-module",
             "exports": {
-                "type": "class",
+                "jsdocType": "class",
                 "name": "ModuleClass",
                 "static": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {
-                        "staticMethod": {
-                            "type": "type",
-                            "jsType": "Function",
-                            "description": "Description of static method",
-                            "accessLevel": "private"
+                    "props": [
+                        {
+                            "key": "staticMethod",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of static method",
+                                "accessLevel": "private"
+                            }
                         }
-                    }
+                    ]
                 },
                 "proto": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {
-                        "method1": {
-                            "type": "type",
-                            "jsType": "Function",
-                            "description": "Description of method1",
-                            "accessLevel": "private"
+                    "props": [
+                        {
+                            "key": "method1",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method1",
+                                "accessLevel": "private"
+                            }
                         },
-                        "method2": {
-                            "type": "type",
-                            "jsType": "Function",
-                            "description": "Description of method2",
-                            "accessLevel": "protected"
+                        {
+                            "key": "method2",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method2",
+                                "accessLevel": "protected"
+                            }
                         },
-                        "method3": {
-                            "type": "type",
-                            "jsType": "Function",
-                            "description": "Description of method3",
-                            "accessLevel": "public"
+                        {
+                            "key": "method3",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method3",
+                                "accessLevel": "public"
+                            }
                         },
-                        "method4": {
-                            "type": "type",
-                            "jsType": "Function",
-                            "description": "Description of method4"
+                        {
+                            "key": "method4",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method4"
+                            }
                         }
-                    }
+                    ]
                 },
                 "members": {
-                    "type": "type",
+                    "jsdocType": "type",
                     "jsType": "Object",
-                    "props": {}
+                    "props": []
                 }
             }
         }
