@@ -5,34 +5,7 @@ var JSDOC = require('../../lib/jsdoc'),
     PATH = require('path'),
     PRJ_ROOT = PATH.join(__dirname, '..', '..');
 
-exports.testPlugins = function(testFile, plugins) {
-    var jsdoc = new JSDOC();
-    (
-        plugins ||
-        [
-            'module',
-            'class',
-            'event',
-            'type',
-            'exports',
-            'description',
-            'constructor',
-            'access-level',
-            'final',
-            'augments',
-            'author',
-            'version',
-            'const',
-            'deprecated',
-            'param',
-            'bem',
-            'returns',
-            'example'
-        ]
-    ).forEach(function(plugin) {
-        jsdoc.registerPlugin(PATH.join(PRJ_ROOT, 'plugins', plugin));
-    });
-
+exports.testPlugins = function(testFile) {
     var baseName = PATH.basename(testFile, '.js');
 
     describe(baseName, function() {
@@ -49,7 +22,7 @@ exports.testPlugins = function(testFile, plugins) {
                         PATH.relative(PRJ_ROOT, jsonFileName),
                     function() {
                         // NOTE: JSON.parse(JSON.stringify(...)) because of Chai.js bug
-                        var res = JSON.stringify(jsdoc.doIt(FS.readFileSync(jsFileName, 'utf-8')), null, 4);
+                        var res = JSON.stringify(JSDOC(FS.readFileSync(jsFileName, 'utf-8')), null, 4);
                         FS.writeFileSync(resFileName, res);
                         JSON.parse(res).should.be.eql(
                             JSON.parse(FS.readFileSync(jsonFileName)),
