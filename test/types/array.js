@@ -3,10 +3,10 @@
  */
 
 /**
- * @param {Boolean|String|Array[String]|A} p1 Param 1
+ * @param {Array[A]} p1 Param 1
  * @exports
  */
-function f(p1) {}
+function f(p1, p2) {}
 
 /**
  * @class A
