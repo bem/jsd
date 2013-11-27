@@ -12,15 +12,10 @@
                         "jsdocType": "param",
                         "name": "p1",
                         "description": "Param 1",
-                        "jsType": [
-                            "Boolean",
-                            "String",
-                            {
-                                "jsType": "Array",
-                                "of": "String"
-                            },
-                            "A"
-                        ],
+                        "jsType": {
+                            "jsType": "Array",
+                            "of": "A"
+                        },
                         "isOptional": false
                     }
                 ]
