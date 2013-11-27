@@ -16,7 +16,7 @@ module.exports = function(jsdoc) {
             }
 
             return {
-                jsType : match[1],
+                jsType : require('./util/js-type').parse(match[1]),
                 name : name,
                 description : match[3],
                 isOptional : isOptional,

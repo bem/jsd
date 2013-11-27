@@ -1,0 +1,47 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "my-module",
+            "exports": {
+                "jsdocType": "type",
+                "jsType": "Function",
+                "params": [
+                    {
+                        "jsdocType": "param",
+                        "name": "p1",
+                        "description": "Param 1",
+                        "jsType": [
+                            "Boolean",
+                            "String",
+                            "A"
+                        ],
+                        "isOptional": false
+                    }
+                ]
+            },
+            "classes": {
+                "A": {
+                    "jsdocType": "class",
+                    "name": "A",
+                    "static": {
+                        "jsdocType": "type",
+                        "jsType": "Object",
+                        "props": []
+                    },
+                    "proto": {
+                        "jsdocType": "type",
+                        "jsType": "Object",
+                        "props": []
+                    },
+                    "members": {
+                        "jsdocType": "type",
+                        "jsType": "Object",
+                        "props": []
+                    }
+                }
+            }
+        }
+    ]
+}
