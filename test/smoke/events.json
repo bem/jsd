@@ -277,7 +277,10 @@
                                                     "jsdocType": "param",
                                                     "name": "e",
                                                     "description": "Event",
-                                                    "jsType": "String|Event",
+                                                    "jsType": [
+                                                        "String",
+                                                        "events:Event"
+                                                    ],
                                                     "isOptional": false
                                                 },
                                                 {
@@ -310,7 +313,10 @@
                                                     "jsdocType": "param",
                                                     "name": "e",
                                                     "description": "Event",
-                                                    "jsType": "String|Event",
+                                                    "jsType": [
+                                                        "String",
+                                                        "events:Event"
+                                                    ],
                                                     "isOptional": false
                                                 },
                                                 {

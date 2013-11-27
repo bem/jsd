@@ -205,7 +205,7 @@ var undef,
 
         /**
          * Fires event handlers
-         * @param {String|Event} e Event
+         * @param {String|events:Event} e Event
          * @param {Object} [data] Additional data
          * @returns {this}
          */
@@ -257,7 +257,7 @@ var undef,
         /**
          * Fires event handlers
          * @deprecated use emit
-         * @param {String|Event} e Event
+         * @param {String|events:Event} e Event
          * @param {Object} [data] Additional data
          * @returns {this}
          */

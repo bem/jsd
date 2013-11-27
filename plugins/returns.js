@@ -3,7 +3,7 @@ module.exports = function(jsdoc) {
         .registerParser('returns', function(comment) {
             var match = comment.match(/^(?:{([^}]+)}\s*)?(.*?)\s*$/);
             return {
-                jsType : match[1],
+                jsType : require('./util/js-type').parse(match[1]),
                 description : match[2]
             };
         })

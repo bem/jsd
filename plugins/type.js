@@ -1,7 +1,7 @@
 module.exports = function(jsdoc) {
     jsdoc
         .registerParser('type', function(comment) {
-            return { jsType : comment };
+            return { jsType : require('./util/js-type').parse(comment) };
         })
         .registerBuilder('type', function(tag, jsdocNode, _, astNode) {
             var res = buildTypeNode(jsdocNode, astNode);
