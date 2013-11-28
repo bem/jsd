@@ -69,7 +69,8 @@
                             "events": [
                                 {
                                     "jsdocType": "event",
-                                    "name": "change Emitted on change checked state",
+                                    "name": "change",
+                                    "description": "Emitted on change checked state",
                                     "params": [
                                         {
                                             "jsdocType": "param",
@@ -82,7 +83,8 @@
                                 },
                                 {
                                     "jsdocType": "event",
-                                    "name": "focus Emitted on focus",
+                                    "name": "focus",
+                                    "description": "Emitted on focus",
                                     "params": [
                                         {
                                             "jsdocType": "param",
@@ -95,7 +97,8 @@
                                 },
                                 {
                                     "jsdocType": "event",
-                                    "name": "blur Emitted on blur",
+                                    "name": "blur",
+                                    "description": "Emitted on blur",
                                     "params": [
                                         {
                                             "jsdocType": "param",
