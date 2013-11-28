@@ -1,5 +1,5 @@
 {
-    "name" : "jsdoc",
+    "name" : "bem-jsdoc",
     "version" : "0.0.1",
     "contributors" : [
         { "name" : "Sergey Berezhnoy", "email" : "veged@ya.ru" },
