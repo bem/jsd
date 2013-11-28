@@ -1,6 +1,7 @@
 {
-    "name" : "bem-jsdoc",
+    "name" : "jsd",
     "version" : "0.0.1",
+    "author" : "Sergey Berezhnoy <veged@ya.ru>",
     "contributors" : [
         { "name" : "Sergey Berezhnoy", "email" : "veged@ya.ru" },
         { "name" : "Dmitry Filatov", "email" : "dfilatov@yandex-team.ru" }
