@@ -7,11 +7,26 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, BEMDOM) {
 /**
  * @exports i-bem__dom:blocks.checkbox
  * @class checkbox
- * @bem checkbox
+ * @bem
+ *
  * @bemmod checked Represents checkbox checked state
  * @bemmod disabled Represents checkbox disabled state
  * @bemmod focused Represents checkbox focused state
- * @bemval true focused
+ */
+
+ /**
+ * @event change Emitted on change checked state
+ * @param {events:Event} e Event object
+ */
+
+ /**
+ * @event focus Emitted on focus
+ * @param {events:Event} e Event object
+ */
+
+ /**
+ * @event blur Emitted on blur
+ * @param {events:Event} e Event object
  */
 
 BEMDOM.decl('checkbox', /** @lends checkbox.prototype */{

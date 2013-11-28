@@ -72,17 +72,51 @@
                                     {
                                         "jsdocType": "bemmod",
                                         "mod": "focused",
-                                        "description": "Represents checkbox focused state",
-                                        "vals": [
-                                            {
-                                                "jsdocType": "bemval",
-                                                "val": "true",
-                                                "description": "focused"
-                                            }
-                                        ]
+                                        "description": "Represents checkbox focused state"
                                     }
                                 ]
-                            }
+                            },
+                            "events": [
+                                {
+                                    "jsdocType": "event",
+                                    "name": "change Emitted on change checked state",
+                                    "params": [
+                                        {
+                                            "jsdocType": "param",
+                                            "name": "e",
+                                            "description": "Event object",
+                                            "jsType": "events:Event",
+                                            "isOptional": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "jsdocType": "event",
+                                    "name": "focus Emitted on focus",
+                                    "params": [
+                                        {
+                                            "jsdocType": "param",
+                                            "name": "e",
+                                            "description": "Event object",
+                                            "jsType": "events:Event",
+                                            "isOptional": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "jsdocType": "event",
+                                    "name": "blur Emitted on blur",
+                                    "params": [
+                                        {
+                                            "jsdocType": "param",
+                                            "name": "e",
+                                            "description": "Event object",
+                                            "jsType": "events:Event",
+                                            "isOptional": false
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     }
                 ]
