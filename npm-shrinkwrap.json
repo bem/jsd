@@ -1,0 +1,21 @@
+{
+  "name": "bem-jsdoc",
+  "version": "0.0.1",
+  "dependencies": {
+    "esprima": {
+      "version": "1.0.4",
+      "from": "esprima@1.0.4",
+      "resolved": "https://registry.npmjs.org/esprima/-/esprima-1.0.4.tgz"
+    },
+    "inherit": {
+      "version": "2.1.0",
+      "from": "inherit@2.1.0",
+      "resolved": "https://registry.npmjs.org/inherit/-/inherit-2.1.0.tgz"
+    },
+    "jspath": {
+      "version": "0.2.10",
+      "from": "jspath@0.2.10",
+      "resolved": "https://registry.npmjs.org/jspath/-/jspath-0.2.10.tgz"
+    }
+  }
+}
