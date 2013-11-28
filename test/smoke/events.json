@@ -28,15 +28,13 @@
                                                     "jsdocType": "param",
                                                     "name": "type",
                                                     "description": "",
-                                                    "jsType": "String",
-                                                    "isOptional": false
+                                                    "jsType": "String"
                                                 },
                                                 {
                                                     "jsdocType": "param",
                                                     "name": "target",
                                                     "description": "",
-                                                    "jsType": "Object",
-                                                    "isOptional": false
+                                                    "jsType": "Object"
                                                 }
                                             ]
                                         }
@@ -145,8 +143,7 @@
                                                     "jsdocType": "param",
                                                     "name": "e",
                                                     "description": "Event type",
-                                                    "jsType": "String",
-                                                    "isOptional": false
+                                                    "jsType": "String"
                                                 },
                                                 {
                                                     "jsdocType": "param",
@@ -159,8 +156,7 @@
                                                     "jsdocType": "param",
                                                     "name": "fn",
                                                     "description": "Handler",
-                                                    "jsType": "Function",
-                                                    "isOptional": false
+                                                    "jsType": "Function"
                                                 },
                                                 {
                                                     "jsdocType": "param",
@@ -188,8 +184,7 @@
                                                     "jsdocType": "param",
                                                     "name": "e",
                                                     "description": "Event type",
-                                                    "jsType": "String",
-                                                    "isOptional": false
+                                                    "jsType": "String"
                                                 },
                                                 {
                                                     "jsdocType": "param",
@@ -202,8 +197,7 @@
                                                     "jsdocType": "param",
                                                     "name": "fn",
                                                     "description": "Handler",
-                                                    "jsType": "Function",
-                                                    "isOptional": false
+                                                    "jsType": "Function"
                                                 },
                                                 {
                                                     "jsdocType": "param",
@@ -270,8 +264,7 @@
                                                     "jsType": [
                                                         "String",
                                                         "events:Event"
-                                                    ],
-                                                    "isOptional": false
+                                                    ]
                                                 },
                                                 {
                                                     "jsdocType": "param",
@@ -306,8 +299,7 @@
                                                     "jsType": [
                                                         "String",
                                                         "events:Event"
-                                                    ],
-                                                    "isOptional": false
+                                                    ]
                                                 },
                                                 {
                                                     "jsdocType": "param",
@@ -339,8 +331,7 @@
                                                     "jsdocType": "param",
                                                     "name": "e",
                                                     "description": "Event type",
-                                                    "jsType": "String",
-                                                    "isOptional": false
+                                                    "jsType": "String"
                                                 },
                                                 {
                                                     "jsdocType": "param",
@@ -353,8 +344,7 @@
                                                     "jsdocType": "param",
                                                     "name": "fn",
                                                     "description": "Handler",
-                                                    "jsType": "Function",
-                                                    "isOptional": false
+                                                    "jsType": "Function"
                                                 },
                                                 {
                                                     "jsdocType": "param",

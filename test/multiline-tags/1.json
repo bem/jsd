@@ -13,15 +13,13 @@
                         "jsdocType": "param",
                         "name": "a",
                         "description": "Param\nmultiline",
-                        "jsType": "*",
-                        "isOptional": false
+                        "jsType": "*"
                     },
                     {
                         "jsdocType": "param",
                         "name": "b",
                         "description": "Param\nmultiline",
-                        "jsType": "*",
-                        "isOptional": false
+                        "jsType": "*"
                     }
                 ]
             }

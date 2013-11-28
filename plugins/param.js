@@ -24,14 +24,14 @@ module.exports = function(jsdoc) {
             };
         })
         .registerBuilder('param', function(tag, curJsdocNode) {
-            (curJsdocNode.params || (curJsdocNode.params = [])).push(
-                {
-                    jsdocType : 'param',
-                    name : tag.name,
-                    description : tag.description,
-                    jsType : tag.jsType,
-                    isOptional : tag.isOptional,
-                    'default' : tag.default
-                });
+            var newJsdocNode ={
+                jsdocType : 'param',
+                name : tag.name,
+                description : tag.description,
+                jsType : tag.jsType
+            };
+            tag.isOptional && (newJsdocNode.isOptional = true);
+            tag.default && (newJsdocNode.default = tag.default);
+            (curJsdocNode.params || (curJsdocNode.params = [])).push(newJsdocNode);
         });
 };

@@ -19,8 +19,7 @@
                                     "jsdocType": "param",
                                     "name": "obj",
                                     "description": "",
-                                    "jsType": "*",
-                                    "isOptional": false
+                                    "jsType": "*"
                                 }
                             ],
                             "returns": {

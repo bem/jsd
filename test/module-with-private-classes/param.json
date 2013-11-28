@@ -12,8 +12,7 @@
                         "jsdocType": "param",
                         "name": "a",
                         "description": "",
-                        "jsType": "A",
-                        "isOptional": false
+                        "jsType": "A"
                     }
                 ]
             },
@@ -36,8 +35,7 @@
                                             "jsdocType": "param",
                                             "name": "b",
                                             "description": "",
-                                            "jsType": "B",
-                                            "isOptional": false
+                                            "jsType": "B"
                                         }
                                     ]
                                 }

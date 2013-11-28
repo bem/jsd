@@ -13,15 +13,13 @@
                         "jsdocType": "param",
                         "name": "fn",
                         "description": "function to throttle",
-                        "jsType": "Function",
-                        "isOptional": false
+                        "jsType": "Function"
                     },
                     {
                         "jsdocType": "param",
                         "name": "timeout",
                         "description": "throttle interval",
-                        "jsType": "Number",
-                        "isOptional": false
+                        "jsType": "Number"
                     },
                     {
                         "jsdocType": "param",

@@ -15,8 +15,7 @@
                         "jsType": {
                             "jsType": "Array",
                             "of": "A"
-                        },
-                        "isOptional": false
+                        }
                     }
                 ]
             },
