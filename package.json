@@ -8,8 +8,7 @@
     ],
     "dependencies": {
         "esprima" : "1.0.4",
-        "inherit" : "2.1.0",
-        "jspath" : "0.2.10"
+        "inherit" : "2.1.0"
     },
     "devDependencies" : {
         "eyes" : "0.1.8",
@@ -17,6 +16,7 @@
         "chai" : "1.8.1",
         "istanbul" : "0.1.44"
     },
+    "main" : "lib/jsdoc",
     "scripts" : {
         "test" : "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
         "accept-all-test" : "for i in `find test/ -name *.res.json`; do cp $i `echo $i | sed 's/res.//'`; done"
