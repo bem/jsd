@@ -21,15 +21,13 @@
                                         "jsdocType": "param",
                                         "name": "p1",
                                         "description": "Param 1 description",
-                                        "jsType": "String",
-                                        "isOptional": false
+                                        "jsType": "String"
                                     },
                                     {
                                         "jsdocType": "param",
                                         "name": "p2",
                                         "description": "Param 2 description",
-                                        "jsType": "Boolean",
-                                        "isOptional": false
+                                        "jsType": "Boolean"
                                     }
                                 ]
                             }

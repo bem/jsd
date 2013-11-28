@@ -16,15 +16,13 @@
                                 "jsdocType": "param",
                                 "name": "e",
                                 "description": "",
-                                "jsType": "events:Event",
-                                "isOptional": false
+                                "jsType": "events:Event"
                             },
                             {
                                 "jsdocType": "param",
                                 "name": "data",
                                 "description": "",
-                                "jsType": "Object",
-                                "isOptional": false
+                                "jsType": "Object"
                             }
                         ]
                     },
@@ -36,8 +34,7 @@
                                 "jsdocType": "param",
                                 "name": "e",
                                 "description": "",
-                                "jsType": "events:Event",
-                                "isOptional": false
+                                "jsType": "events:Event"
                             }
                         ]
                     }
