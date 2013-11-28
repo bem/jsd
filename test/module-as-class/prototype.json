@@ -7,11 +7,6 @@
             "exports": {
                 "jsdocType": "class",
                 "name": "ModuleClass",
-                "static": {
-                    "jsdocType": "type",
-                    "jsType": "Object",
-                    "props": []
-                },
                 "proto": {
                     "jsdocType": "type",
                     "jsType": "Object",
@@ -33,11 +28,6 @@
                             }
                         }
                     ]
-                },
-                "members": {
-                    "jsdocType": "type",
-                    "jsType": "Object",
-                    "props": []
                 }
             }
         }

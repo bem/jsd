@@ -13,21 +13,6 @@
                         "val": {
                             "jsdocType": "class",
                             "name": "input",
-                            "static": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "proto": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "members": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
                             "bem": {
                                 "jsdocType": "bem",
                                 "block": "input",

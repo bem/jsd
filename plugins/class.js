@@ -41,6 +41,11 @@ module.exports = function(jsdoc) {
             var jsdocNode = { jsdocType : 'type', jsType : tag.jsType };
             addClassNode(this, className).members.props.push({ key : name, val : jsdocNode });
             return jsdocNode;
+        })
+        .registerPostprocessor('class', function(jsdocNode) {
+            ['static', 'proto', 'members'].forEach(function(k) {
+                if(!jsdocNode[k].props.length) delete jsdocNode[k];
+            });
         });
 };
 

@@ -12,11 +12,6 @@
                 "C": {
                     "jsdocType": "class",
                     "name": "C",
-                    "static": {
-                        "jsdocType": "type",
-                        "jsType": "Object",
-                        "props": []
-                    },
                     "proto": {
                         "jsdocType": "type",
                         "jsType": "Object",
@@ -52,21 +47,11 @@
                                 }
                             }
                         ]
-                    },
-                    "members": {
-                        "jsdocType": "type",
-                        "jsType": "Object",
-                        "props": []
                     }
                 },
                 "A": {
                     "jsdocType": "class",
                     "name": "A",
-                    "static": {
-                        "jsdocType": "type",
-                        "jsType": "Object",
-                        "props": []
-                    },
                     "proto": {
                         "jsdocType": "type",
                         "jsType": "Object",
@@ -80,21 +65,11 @@
                                 }
                             }
                         ]
-                    },
-                    "members": {
-                        "jsdocType": "type",
-                        "jsType": "Object",
-                        "props": []
                     }
                 },
                 "B": {
                     "jsdocType": "class",
                     "name": "B",
-                    "static": {
-                        "jsdocType": "type",
-                        "jsType": "Object",
-                        "props": []
-                    },
                     "proto": {
                         "jsdocType": "type",
                         "jsType": "Object",
@@ -108,11 +83,6 @@
                                 }
                             }
                         ]
-                    },
-                    "members": {
-                        "jsdocType": "type",
-                        "jsType": "Object",
-                        "props": []
                     }
                 }
             }

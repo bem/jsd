@@ -42,11 +42,6 @@
                             }
                         }
                     ]
-                },
-                "members": {
-                    "jsdocType": "type",
-                    "jsType": "Object",
-                    "props": []
                 }
             }
         }

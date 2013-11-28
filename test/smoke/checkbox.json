@@ -13,11 +13,6 @@
                         "val": {
                             "jsdocType": "class",
                             "name": "checkbox",
-                            "static": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
                             "proto": {
                                 "jsdocType": "type",
                                 "jsType": "Object",
@@ -49,11 +44,6 @@
                                         }
                                     }
                                 ]
-                            },
-                            "members": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
                             },
                             "bem": {
                                 "jsdocType": "bem",

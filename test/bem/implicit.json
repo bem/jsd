@@ -13,21 +13,6 @@
                         "val": {
                             "jsdocType": "class",
                             "name": "my-block",
-                            "static": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "proto": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "members": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
                             "bem": {
                                 "jsdocType": "bem",
                                 "block": "my-block"
@@ -39,21 +24,6 @@
                         "val": {
                             "jsdocType": "class",
                             "name": "my-block__my-elem1",
-                            "static": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "proto": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "members": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
                             "bem": {
                                 "jsdocType": "bem",
                                 "block": "my-block",
@@ -66,21 +36,6 @@
                         "val": {
                             "jsdocType": "class",
                             "name": "my-block__my-elem2",
-                            "static": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "proto": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "members": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
                             "bem": {
                                 "jsdocType": "bem",
                                 "block": "my-block",
@@ -95,21 +50,6 @@
                         "val": {
                             "jsdocType": "class",
                             "name": "my-block__my-elem3",
-                            "static": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "proto": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "members": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
                             "bem": {
                                 "jsdocType": "bem",
                                 "block": "my-block",

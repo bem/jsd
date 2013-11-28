@@ -12,22 +12,7 @@
                         "key": "Export1",
                         "val": {
                             "jsdocType": "class",
-                            "name": "Export1",
-                            "static": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "proto": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            },
-                            "members": {
-                                "jsdocType": "type",
-                                "jsType": "Object",
-                                "props": []
-                            }
+                            "name": "Export1"
                         }
                     },
                     {
