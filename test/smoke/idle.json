@@ -17,14 +17,6 @@
                         "jsType": "Object",
                         "props": [
                             {
-                                "key": "__constructor",
-                                "val": {
-                                    "jsdocType": "type",
-                                    "jsType": "Function",
-                                    "isConstructor": true
-                                }
-                            },
-                            {
                                 "key": "start",
                                 "val": {
                                     "jsdocType": "type",
@@ -58,6 +50,10 @@
                     "augments": {
                         "jsdocType": "type",
                         "jsType": "events:Emitter"
+                    },
+                    "cons": {
+                        "jsdocType": "type",
+                        "jsType": "Function"
                     }
                 }
             }
