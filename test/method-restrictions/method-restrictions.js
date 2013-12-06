@@ -11,9 +11,25 @@ modules.define('my-module', function(provide) {
 var ModuleClass = inherit(/** @lends ModuleClass.prototype */{
     /**
      * Description of method1
-     * @final
+     * @abstract
      */
     method1 : function() {
+
+    },
+
+    /**
+     * Description of method1
+     * @override
+     */
+    method2 : function() {
+
+    },
+
+    /**
+     * Description of method1
+     * @final
+     */
+    method3 : function() {
 
     }
 });

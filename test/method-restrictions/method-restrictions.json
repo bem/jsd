@@ -17,6 +17,24 @@
                                 "jsdocType": "type",
                                 "jsType": "Function",
                                 "description": "Description of method1",
+                                "isAbstract": true
+                            }
+                        },
+                        {
+                            "key": "method2",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method1",
+                                "isOverridden": true
+                            }
+                        },
+                        {
+                            "key": "method3",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "description": "Description of method1",
                                 "isFinal": true
                             }
                         }
