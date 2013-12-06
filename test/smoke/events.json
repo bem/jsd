@@ -18,28 +18,6 @@
                                 "jsType": "Object",
                                 "props": [
                                     {
-                                        "key": "__constructor",
-                                        "val": {
-                                            "jsdocType": "type",
-                                            "jsType": "Function",
-                                            "isConstructor": true,
-                                            "params": [
-                                                {
-                                                    "jsdocType": "param",
-                                                    "name": "type",
-                                                    "description": "",
-                                                    "jsType": "String"
-                                                },
-                                                {
-                                                    "jsdocType": "param",
-                                                    "name": "target",
-                                                    "description": "",
-                                                    "jsType": "Object"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
                                         "key": "preventDefault",
                                         "val": {
                                             "jsdocType": "type",
@@ -118,6 +96,24 @@
                                             "jsType": "*",
                                             "description": "Data"
                                         }
+                                    }
+                                ]
+                            },
+                            "cons": {
+                                "jsdocType": "type",
+                                "jsType": "Function",
+                                "params": [
+                                    {
+                                        "jsdocType": "param",
+                                        "name": "type",
+                                        "description": "",
+                                        "jsType": "String"
+                                    },
+                                    {
+                                        "jsdocType": "param",
+                                        "name": "target",
+                                        "description": "",
+                                        "jsType": "Object"
                                     }
                                 ]
                             }
