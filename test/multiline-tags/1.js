@@ -9,9 +9,9 @@
  * @exports my-module
  * @type Function
  * @param {*} a Param
- *              multiline
+ * multiline
  * @param {*} b Param
- *              multiline
+ * multiline
  */
 function bla(a, b) {
 
