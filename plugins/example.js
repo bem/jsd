@@ -4,6 +4,6 @@ module.exports = function(jsdoc) {
             return { content : comment };
         })
         .registerBuilder('example', function(tag, curJsdocNode) {
-            curJsdocNode.example = tag.content;
+            (curJsdocNode.examples || (curJsdocNode.examples = [])).push(tag.content);
         });
 };
