@@ -1,14 +1,6 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('abstract', function() {
-            return {};
-        })
-        .registerParser('override', function() {
-            return {};
-        })
-        .registerParser('final', function() {
-            return {};
-        })
+        .registerParser(['abstract', 'override', 'final'], Boolean)
         .registerBuilder('abstract', function(tag, curJsdocNode) {
             curJsdocNode.isAbstract = true;
         })

@@ -2,12 +2,7 @@ var JSPATH = require('jspath');
 
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('class', function(comment) {
-            return { name : comment };
-        })
-        .registerParser('lends', function(comment) {
-            return { to : comment };
-        })
+        .registerParser(['class', 'lends'], String)
         .registerParser('member', function(comment) {
             var match = comment.match(/^(?:{([^}]+)}\s*)?(.*?)\s*$/);
             return {
@@ -16,10 +11,10 @@ module.exports = function(jsdoc) {
             };
         })
         .registerBuilder('class', function(tag) {
-            return this.currentClass = addClassNode(this, tag.name);
+            return this.currentClass = addClassNode(this, tag.content);
         })
         .registerBuilder('lends', function(tag) {
-            var matches = tag.to.split('.');
+            var matches = tag.content.split('.');
             return addClassNode(this, matches[0])
                 [matches[matches.length - 1] === 'prototype'?
                     'proto' :

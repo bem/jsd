@@ -1,8 +1,6 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('description', function(comment) {
-            return { content : comment };
-        })
+        .registerParser('description', String)
         .registerBuilder('description', function(tag, curJsdocNode) {
             curJsdocNode.description = tag.content;
         });

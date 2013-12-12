@@ -1,15 +1,13 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('module', function(comment) {
-            return { name : comment };
-        })
+        .registerParser('module', String)
         .registerBuilder('module', function(tag, curJsdocNode) {
             var moduleNode = this.currentModule = {
                     jsdocType : 'module',
-                    name : tag.name
+                    name : tag.content
                 };
             (curJsdocNode.modules || (curJsdocNode.modules = [])).push(
-                (this.modules || (this.modules = {}))[tag.name] = moduleNode);
+                (this.modules || (this.modules = {}))[tag.content] = moduleNode);
             return moduleNode;
         })
         .registerPostprocessor(function(jsdocNode, postprocess) {

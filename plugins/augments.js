@@ -1,9 +1,7 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('augments', function(comment) {
-            return { name : comment };
-        })
+        .registerParser('augments', String)
         .registerBuilder('augments', function(tag, curJsdocNode) {
-            curJsdocNode.augments = { jsdocType : 'type', jsType : tag.name };
+            curJsdocNode.augments = { jsdocType : 'type', jsType : tag.content };
         });
 };

@@ -1,9 +1,7 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('version', function(comment) {
-            return { version : comment.trim() };
-        })
+        .registerParser('version', String)
         .registerBuilder('version', function(tag, curJsdocNode) {
-            curJsdocNode.version = tag.version;
+            curJsdocNode.version = tag.content;
         });
 };

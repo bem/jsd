@@ -1,10 +1,8 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('exports', function(comment) {
-            return { name : comment };
-        })
+        .registerParser('exports', String)
         .registerBuilder('exports', function(tag, curJsdocNode) {
-            var exportsName = tag.name;
+            var exportsName = tag.content;
 
             if(!exportsName) {
                 if(!this.currentModule)

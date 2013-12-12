@@ -1,8 +1,6 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('constructor', function() {
-            return {};
-        })
+        .registerParser('constructor', Boolean)
         .registerBuilder('constructor', function(tag, curJsdocNode) {
             this.currentClass.cons = curJsdocNode;
 

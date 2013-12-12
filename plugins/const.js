@@ -1,8 +1,6 @@
 module.exports = function(jsdoc) {
     jsdoc
-        .registerParser('const', function() {
-            return {};
-        })
+        .registerParser('const', Boolean)
         .registerBuilder('const', function(tag, curJsdocNode) {
             curJsdocNode.isConst = true;
         });
