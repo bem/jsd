@@ -5,5 +5,6 @@ Yet another JSDoc parser. It supports limited set of tags and features.
 ## API
 
 ```js
-var jsdocTree = require('jsd')(source);
+var jsdoc = require('jsd')(plugins),
+    jsdocTree = jsdoc(source);
 ```
