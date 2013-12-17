@@ -12,5 +12,3 @@ matrix:
 branches:
   only:
     - master
-
-before_install: "npm -g install npm"
