@@ -1,24 +1,29 @@
 {
-    "name" : "jsd",
-    "version" : "0.0.1",
-    "author" : "Sergey Berezhnoy <veged@ya.ru>",
-    "contributors" : [
-        { "name" : "Sergey Berezhnoy", "email" : "veged@ya.ru" },
-        { "name" : "Dmitry Filatov", "email" : "dfilatov@yandex-team.ru" }
-    ],
-    "dependencies": {
-        "esprima" : "1.0.4",
-        "inherit" : "2.1.0"
+  "name": "jsd",
+  "version": "1.0.0",
+  "author": "Sergey Berezhnoy <veged@ya.ru>",
+  "contributors": [
+    {
+      "name": "Sergey Berezhnoy",
+      "email": "veged@ya.ru"
     },
-    "devDependencies" : {
-        "eyes" : "0.1.8",
-        "mocha" : "1.13.0",
-        "chai" : "1.8.1",
-        "istanbul" : "0.1.44"
-    },
-    "main" : "lib/jsdoc",
-    "scripts" : {
-        "test" : "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
-        "accept-all-test" : "for i in `find test/ -name *.res.json`; do cp $i `echo $i | sed 's/res.//'`; done"
+    {
+      "name": "Dmitry Filatov",
+      "email": "dfilatov@yandex-team.ru"
     }
+  ],
+  "dependencies": {
+    "esprima": "1.0.4",
+    "inherit": "2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "1.13.0",
+    "chai": "1.8.1",
+    "istanbul": "0.1.44"
+  },
+  "main": "lib/jsdoc",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
+    "accept-all-test": "for i in `find test/ -name *.res.json`; do cp $i `echo $i | sed 's/res.//'`; done"
+  }
 }
